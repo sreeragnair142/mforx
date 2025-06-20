@@ -807,6 +807,19 @@ header.main-header .header-sticky.active{
     justify-content: center;
 }
 
+
+.hero-btn {
+    opacity: 0.7; /* Adjust the value between 0 (fully transparent) and 1 (fully opaque) */
+}
+.store-btn {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.store-btn:hover {
+    opacity: 1;
+}
+
 .store-btn {
     display: flex;
     align-items: center;
@@ -6435,7 +6448,7 @@ header.main-header .header-sticky.active{
         .fadeInUp[data-wow-delay="1.2s"] { animation-delay: 1.2s; } */ 
 
            .new-dark-section {
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            /* background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); */
             color: #ffffff;
             padding: 100px 0;
             position: relative;
@@ -6477,7 +6490,7 @@ header.main-header .header-sticky.active{
         }
 
         .section-title h2 span {
-            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            /* background: linear-gradient(45deg, #00d4ff, #0099cc); */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
