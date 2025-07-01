@@ -1138,8 +1138,7 @@ header.main-header .header-sticky.active{
 }
 
 .hero-content{
-    position: relative;
-    /* bottom: 70px; */
+ 
     width: 100%;
     max-width: 840px;
     margin: 0 auto;
