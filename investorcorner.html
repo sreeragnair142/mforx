@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>MFORX</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/faviconnew.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    
+    <style>
+        .why-invest-section {
+            background: #000000;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-invest-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.02"/><circle cx="50" cy="10" r="1" fill="%23ffffff" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .why-invest-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .investment-hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .investment-hero h2 {
+            color: rgb(255, 255, 255);
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, rgb(231, 141, 92), rgb(162, 155, 254));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .investment-hero .highlight {
+            color: rgb(255, 255, 255);
+            position: relative;
+        }
+        
+        .investment-hero .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, rgb(231, 141, 92), rgb(162, 155, 254));
+            border-radius: 2px;
+        }
+        
+        .investment-hero p {
+            color: #cccccc;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .investment-tagline {
+            background: linear-gradient(135deg, rgb(231, 141, 92), rgb(162, 155, 254));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .investment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+        
+        .investment-points {
+            padding: 40px;
+        }
+        
+        .investment-points h3 {
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .investment-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .investment-list li {
+            color: rgb(255, 255, 255);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .investment-list li::before {
+            content: '▲';
+            color: rgb(231, 141, 92);
+            font-size: 1rem;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .investment-vision {
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .investment-vision h3 {
+            color: rgb(255, 255, 255);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .investment-vision p {
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.4;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .geometric-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        .geometric-background svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .investment-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .investment-cta h2 {
+            color: rgb(255, 255, 255);
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .investment-cta .cta-highlight {
+            background: linear-gradient(135deg, rgb(231, 141, 92), rgb(162, 155, 254));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .terms-note {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .investment-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .investment-hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .investment-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .investment-points,
+            .investment-vision {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index.html">
+						<img src="images/logoforxnew1.png" alt="Logo">
+					</a>
+                    <!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class=""><a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
+                                <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">Sabka Ecosystem</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Investor Corner</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Header Start -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="wow fadeInUp" data-cursor="-opaque">Investor <span>Corner</span></h1>
+                        <nav class="wow fadeInUp" data-wow-delay="0.2s">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index-2.html">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Investor Corner</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Why Invest in Sabka Section Start -->
+    <div class="why-invest-section">
+        <div class="container">
+            <div class="why-invest-content">
+                <!-- Investment Hero Start -->
+                <div class="investment-hero wow fadeInUp">
+                    <!-- <p class="investment-tagline">Now, it's your turn</p> -->
+                    <h2>Why Investing in Sabka?</h2>
+                    <p>Your participation means partnership in something truly meaningful</p>
+                </div>
+                <!-- Investment Hero End -->
+                
+                <!-- Investment Grid Start -->
+                <div class="investment-grid">
+                    <!-- Investment Points Start -->
+                    <div class="investment-points wow fadeInLeft" data-wow-delay="0.2s">
+                        <h3>Yes, like all ventures, the journey carries market-linked risks - but Sabka isn't just another startup. We are built to grow, scale, and transform:</h3>
+                        <ul class="investment-list">
+                            <li>Founder with proven industry expertise</li>
+                            <li>Proven market acceptance</li>
+                            <li>Multiple revenue channels & income models</li>
+                            <li>Technology-powered, globally scalable platforms</li>
+                            <li>Premium office infrastructure & execution-ready teams</li>
+                            <li>Media recognition and public credibility</li>
+                            <li>Strong social foundation & trust-driven branding</li>
+                        </ul>
+                    </div>
+                    <!-- Investment Points End -->
+                    
+                    <!-- Investment Vision Start -->
+                    <div class="investment-vision wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="geometric-background">
+                            <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Define gradients -->
+                                <defs>
+                                    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+                                    </linearGradient>
+                                    <linearGradient id="darkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0.9" />
+                                        <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.6" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Large geometric shapes -->
+                                <polygon points="50,50 200,80 180,200 60,180" fill="url(#blueGradient)" stroke="#3b82f6" stroke-width="1" opacity="0.7"/>
+                                <polygon points="300,30 500,60 480,180 320,160" fill="url(#darkGradient)" stroke="#64748b" stroke-width="1" opacity="0.8"/>
+                                <polygon points="100,220 280,240 260,350 120,330" fill="url(#blueGradient)" stroke="#3b82f6" stroke-width="1" opacity="0.6"/>
+                                <polygon points="350,200 550,220 530,350 370,320" fill="url(#darkGradient)" stroke="#64748b" stroke-width="1" opacity="0.7"/>
+                                
+                                <!-- Medium triangular shapes -->
+                                <polygon points="150,120 250,140 200,220" fill="url(#blueGradient)" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+                                <polygon points="400,100 500,120 450,200" fill="url(#darkGradient)" stroke="#64748b" stroke-width="1" opacity="0.6"/>
+                                <polygon points="80,280 180,300 130,380" fill="url(#blueGradient)" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
+                                <polygon points="420,260 520,280 470,360" fill="url(#darkGradient)" stroke="#64748b" stroke-width="1" opacity="0.5"/>
+                                
+                                <!-- Small accent shapes -->
+                                <polygon points="220,160 270,170 245,210" fill="#3b82f6" opacity="0.3"/>
+                                <polygon points="380,140 430,150 405,190" fill="#64748b" opacity="0.4"/>
+                                <polygon points="160,300 210,310 185,350" fill="#3b82f6" opacity="0.3"/>
+                                <polygon points="440,300 490,310 465,350" fill="#64748b" opacity="0.4"/>
+                                
+                                <!-- Connection lines -->
+                                <line x1="125" y1="115" x2="200" y2="180" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+                                <line x1="300" y1="95" x2="425" y2="160" stroke="#64748b" stroke-width="1" opacity="0.3"/>
+                                <line x1="190" y1="260" x2="300" y2="300" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+                                <line x1="400" y1="240" x2="500" y2="280" stroke="#64748b" stroke-width="1" opacity="0.3"/>
+                                
+                                <!-- Dots for connection points -->
+                                <circle cx="125" cy="115" r="3" fill="#3b82f6" opacity="0.6"/>
+                                <circle cx="300" cy="95" r="3" fill="#64748b" opacity="0.6"/>
+                                <circle cx="190" cy="260" r="3" fill="#3b82f6" opacity="0.6"/>
+                                <circle cx="400" cy="240" r="3" fill="#64748b" opacity="0.6"/>
+                                <circle cx="200" cy="180" r="2" fill="#3b82f6" opacity="0.4"/>
+                                <circle cx="425" cy="160" r="2" fill="#64748b" opacity="0.4"/>
+                                <circle cx="300" cy="300" r="2" fill="#3b82f6" opacity="0.4"/>
+                                <circle cx="500" cy="280" r="2" fill="#64748b" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h3>We're not just building a company</h3>
+                        <p>We're building the future of employment</p>
+                    </div>
+                    <!-- Investment Vision End -->
+                </div>
+                <!-- Investment Grid End -->
+            </div>
+        </div>
+    </div>
+    <!-- Why Invest in Sabka Section End -->
+
+    <!-- How It Work Section Start -->
+    <div class="how-it-work">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- How Work Content Start -->
+                    <div class="how-work-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">sabka</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Revenue & Investments
+                                <span>At presents</span>
+                            </h2>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- How Work Steps Start -->
+                        <div class="how-work-steps">
+                            <!-- How Work Item Start -->
+                            <div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="how-work-header">
+                                    <div class="icon-box">
+                                        <img src="images/icon-how-work-step-1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="how-work-item-content">
+                                    <h3>Revenue Mode </h3>
+                                    <p>Not initiated.</p>
+                                </div>
+                            </div>
+                            <!-- How Work Item End -->
+
+                            <!-- How Work Item Start -->
+                            <div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="how-work-header">
+                                    <div class="icon-box">
+                                        <img src="images/icon-how-work-step-2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="how-work-item-content">
+                                    <h3>mode of operation</h3>
+                                    <p>Bootstraped</p>
+                                </div>
+                            </div>
+                            <!-- How Work Item End -->
+
+                            <!-- How Work Item Start -->
+                            <div class="how-work-item wow fadeInUp" data-wow-delay="0.8s">
+                                <div class="how-work-header">
+                                    <div class="icon-box">
+                                        <img src="images/icon-how-work-step-3.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="how-work-item-content">
+                                    <h3>closed invetments</h3>
+                                    <p>preseed round 1</p>
+                                </div>
+                            </div>
+                            <!-- How Work Item End -->
+
+                            <!-- How Work Item Start -->
+                            <div class="how-work-item wow fadeInUp" data-wow-delay="1s">
+                                <div class="how-work-header">
+                                    <div class="icon-box">
+                                        <img src="images/icon-how-work-step-4.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="how-work-item-content">
+                                    <h3>prseed investment type</h3>
+                                    <p>equity funding .</p>
+                                </div>
+                            </div>
+                            <!-- How Work Item End -->
+                        </div>
+                        <!-- How Work Steps End -->
+                    </div>
+                    <!-- How Work Content End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- How Work Video Content Start -->
+                    <div class="how-work-video-content">
+                        <!-- How Work Video Start -->
+                        <div class="col-lg-12">
+                            <div class="wow scaleIn">
+                                <img src="images/c1.webp" class="w-100 rotate-animation" alt="">
+                            </div>
+                        </div>
+                        <!-- How Work Video Start -->
+
+                        <!-- Section Footer Text Start -->
+                        <div class="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
+                            <p>We help businesses design, build, and deploy intelligent solutions that drive real
+                                results. <a href="contact.html">Contact Now</a></p>
+                        </div>
+                        <!-- Section Footer Text End -->
+                    </div>
+                    <!-- How Work Video Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How It Work Section End -->
+
+    <!-- Contact Form Container Start -->
+    <div class="contact-form-container">
+        <div class="contact-form">
+            <!-- Section Title Start -->
+            <div class="section-title">
+                <h2 class="wow fadeInUp" data-cursor="-opaque">Investor Request Form</h2>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Contact Form Start -->
+            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp"
+                data-wow-delay="0.2s">
+                <div class="row">
+                    <!-- Name -->
+                    <div class="form-group col-md-6 mb-4">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group col-md-6 mb-4">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="form-group col-md-6 mb-4">
+                        <input type="text" name="mob" class="form-control" placeholder="Mobile Number" required>
+                    </div>
+
+                    <!-- Country -->
+                    <div class="form-group col-md-6 mb-4">
+                        <div class="select-wrapper" style="position: relative;">
+                            <select name="country" class="form-control" required
+                                style="appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 40px;">
+                                <option value="">Select Country</option>
+                                <option value="India">India</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Japan">Japan</option>
+                                <option value="China">China</option>
+                                <option value="Singapore">Singapore</option>
+                            </select>
+                            <span
+                                style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #666;">
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- State -->
+                    <div class="form-group col-md-6 mb-4">
+                        <input type="text" name="state" class="form-control" placeholder="State" required>
+                    </div>
+
+                    <!-- City -->
+                    <div class="form-group col-md-6 mb-4">
+                        <input type="text" name="city" class="form-control" placeholder="City" required>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group col-md-12 mb-5">
+                        <textarea name="message" class="form-control" rows="4" placeholder="Your Message"
+                            required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-lg-12">
+                        <div class="contact-form-btn text-center">
+                            <button type="submit" class="btn-default"
+                                style="width: 160px; padding: 15px 20px;"><span>Submit</span></button>
+                            <div id="msgSubmit" class="h3 hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Contact Form End -->
+        </div>
+    </div>
+    <!-- Contact Form Container End -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-7">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-cursor="-opaque">Let's start work <span>together!</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Looking for a new opportunity? Join us and take the next step in your career journey.</p>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-5">
+                    <!-- Section Button Start -->
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="contact.html" class="btn-default">Let's Work Together</a>
+                    </div>
+                    <!-- Section Button End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <!-- About Footer Start -->
+                    <div class="about-footer">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img src="images/logoforxnew1.png" alt="">
+                        </div>
+                        <!-- Footer Logo End -->
+                    </div>
+                    <!-- About Footer End -->
+                </div>
+
+                <div class="col-lg-5 col-md-8">
+                    <div class="footer-contact-box">
+                        <!-- Footer Links Start -->
+                        <div class="footer-links">
+                            <h3>Get In Touch</h3>
+                            <p><a href="tel:152885253">+(00) - 152 885 253</a></p>
+                            <p><a href="mailto:info@domainname.com">info@domainname.com</a></p>
+                        </div>
+                        <!-- Footer Links End -->
+
+                        <!-- Footer Links Start -->
+                        <div class="footer-links">
+                            <h3>Our Location</h3>
+                            <p>123 Lorem Street Suite 5B, Ips Park London, UK SW1A 1AA</p>
+                        </div>
+                        <!-- Footer Links End -->
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Footer Links Start -->
+                    <div class="footer-links footer-privacy-policy">
+                        <h3>Subscribe Newsletter's</h3>
+                        <!-- Footer Newsletter Form Start -->
+                        <div class="footer-newsletter-form">
+                            <form id="newslettersForm" action="#" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="mail" class="form-control" id="mail"
+                                        placeholder="Enter your email" required>
+                                    <button type="submit" class="newsletter-btn">subscribe<i
+                                            class="fa-regular fa-paper-plane"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Footer Newsletter Form End -->
+                    </div>
+                    <!-- Footer Links End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright Text Start -->
+                    <div class="footer-copyright-text">
+                        <p>Copyright © 2025 Bloombiz Creatives All Rights Reserved.</p>
+                    </div>
+                    <!-- Footer Copyright Text End -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+
+</html>
