@@ -196,11 +196,15 @@ body{
 .row{
     margin-right: -15px;
     margin-left: -15px;
+    /* position: relative;
+    bottom: 100px; */
 }
 
 .row > *{
 	padding-right: 15px;
 	padding-left: 15px;
+    /* position: relative;
+    bottom: 100px; */
 }
 
 .row.no-gutters{
