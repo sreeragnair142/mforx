@@ -7778,13 +7778,13 @@ header.main-header .header-sticky.active {
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            text-align: left;
         }
 
         .hero-app-buttons {
             margin-bottom: 15px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
         }
 
