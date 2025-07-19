@@ -8014,3 +8014,40 @@ header.main-header .header-sticky.active {
       white-space: normal;
     }
   }
+.photo-gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-gallery figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 1; /* Always visible */
+    visibility: visible;
+}
+
+@media (hover: hover) {
+    .overlay-text {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .photo-gallery:hover .overlay-text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
