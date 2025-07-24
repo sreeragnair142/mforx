@@ -154,151 +154,363 @@
 
     </head>
 
-    <body>
-        <div class="hero">
-            <!-- Video Background -->
-            <video autoplay muted loop playsinline class="hero-video">
-                <source src="images/sabcanew.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+   
+    <head>
+    <style>
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
 
-            <!-- Dark Gradient Overlay -->
-            <div class="video-overlay"></div>
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
 
-            <!-- Content Container -->
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Left Column -->
-                    <div class="col-lg-8 col-md-12">
-                        <div class="hero-content">
-                            <!-- Section Title -->
-                            <div class="section-title wow fadeInUp" data-wow-delay="0.1s" style="text-align: left;">
-                                <h2 class="responsive-heading"
-                                    style="font-size: clamp(24px, 5vw, 40px); color: white; line-height: 1.2;">
-                                    Welcome to Sabka <span style="color: #f3a9ff;">World of Opportunities</span>
-                                </h2>
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            color: white;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            color: #4a90e2;
+        }
+
+        .hero-subtitle {
+            position: relative;
+            bottom: 30px;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            text-align: center;
+            font-weight: 400;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(10, 3, 34, 0.542);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(10, 3, 34, 0.9);
+        }
+
+        .service-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .service-title {
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .service-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .visit-btn {
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .visit-btn:hover {
+            background: linear-gradient(135deg, #357abd, #2968a3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+            color: white;
+        }
+
+        .app-store-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .app-store-links img {
+            height: 32px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-links img:hover {
+            transform: scale(1.05);
+        }
+
+        .video-section {
+            flex-shrink: 0;
+            width: 300px;
+            position: relative;
+            background: linear-gradient(135deg, #0e0631, #2e2565);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .video-section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a90e2;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: white;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .video-section:hover .video-caption {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .service-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .video-section {
+                width: 100%;
+                max-width: 350px;
+                order: -1;
+            }
+
+            .service-content {
+                align-items: center;
+            }
+
+            .service-buttons {
+                align-items: center;
+                width: 100%;
+            }
+
+            .visit-btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+
+            .app-store-links {
+                justify-content: center;
+            }
+
+            .services-container {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 0.5rem;
+            }
+
+            .service-card {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .hero-subtitle {
+                margin-bottom: 2rem;
+            }
+
+            .app-store-links img {
+                height: 28px;
+            }
+
+            .video-thumbnail {
+                height: 180px;
+            }
+
+            .play-button {
+                width: 40px;
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        .wow {
+            visibility: visible;
+            animation-name: fadeInUp;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="images/sabcanew.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="hero-content">
+            <div class="section-title text-center mb-5">
+                <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
+                    Welcome to SABCA World of <span>Opportunities</span>
+                </h2>
+            </div>
+            <p class="hero-subtitle">Choose Your Preferred Service From Below</p>
+
+            <div class="services-container">
+                <!-- Self Services Platform Card -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-title">Self Services Platforms</h3>
+                        <div class="service-buttons">
+                            <a href="#" class="visit-btn">Visit Website</a>
+                            <div class="app-store-links">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                    alt="Google Play" />
+                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                    alt="App Store" />
                             </div>
-
-
-
-
-                            <!-- Yellow Highlight - Main Question -->
-                            <div class="yellow-highlightt large wow fadeInUp" data-wow-delay="0.12s"
-                                style="font-size: clamp(16px, 3vw, 20px); ">
-                                Need Direct Self-Service Access to Job Vacancies & The Job Seeker Pool?
-
-                            </div>
-
-                            <!-- Secondary Button - Added above App Download -->
-                            <div class="hero-secondary-btn wow fadeInUp" data-wow-delay="0.14s"
-                                style="margin-bottom: 0px;">
-                                <a href="https://sabkaworld.com" target="_blank" class="secondary-btn" style="
-                                display: inline-flex;
-                                align-items: center;
-                                gap: 8px;
-                                padding: 12px 25px;
-                                border: 2px solid rgba(255, 255, 255, 0.4);
-                                background: rgba(255, 255, 255, 0.1);
-                                color: white;
-                                text-decoration: none;
-                                border-radius: 30px;
-                                font-size: 14px;
-                                font-weight: 500;
-                                transition: all 0.3s ease;
-                                backdrop-filter: blur(10px);
-                                text-transform: uppercase;
-                                letter-spacing: 0.5px;
-                                position: relative;
-                                bottom: 50px;
-                            ">
-                                    <i class="fas fa-globe"></i>
-                                    <span>For website access <strong>click here</strong></span>
-                                </a>
-                            </div>
-
-                            <!-- App Download Title -->
-                            <div class="app-section-title wow fadeInUp" data-wow-delay="0.15s">
-                                Download Sabka Job App
-                            </div>
-
-                            <!-- App Buttons -->
-                            <div class="hero-app-buttons wow fadeInUp" data-wow-delay="0.2s">
-                                <a href="https://apps.apple.com" target="_blank" class="hero-store-btn apple">
-                                    <i class="fab fa-apple"></i>
-                                    <span>App Store</span>
-                                </a>
-                                <a href="https://play.google.com/store" target="_blank" class="hero-store-btn google">
-                                    <img src="images/google-play.png" alt="">
-                                    <span>Google Play</span>
-                                </a>
-                            </div>
-
-                            <!-- Yellow Highlight - No Time Question -->
-                            <div class="yellow-highlight small wow fadeInUp" data-wow-delay="0.22s">
-                                No Time for Self Service? Get Pro Support for Your Hiring
-                            </div>
-
-                            <!-- Explore Button -->
-                            <!-- Explore Button Group -->
-                            <div class="hero-btn-group wow fadeInUp" data-wow-delay="0.25s"
-                                style="display: flex; flex-direction: column; gap: 16px; position: relative; bottom: 10px;">
-
-                                <!-- Recruitment Button -->
-                                <a href="https://sabkaworld.com" target="_blank" class="store-btn"
-                                    style="display: inline-flex; align-items: center; gap: 8px; justify-content: center;
-                                   padding: 12px 20px; width: 100%; background: rgba(255,255,255,0.1); border-radius: 12px;
-                                   color: white; font-weight: 500; text-decoration: none; backdrop-filter: blur(10px);">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Explore Personalised Recruitment Services</span>
-                                </a>
-
-                                <!-- Courses Button (Matching Style) -->
-                                <a href="https://sabkaworld.com" target="_blank" class="store-btn"
-                                    style="display: inline-flex; align-items: center; gap: 8px; justify-content: center;
-                                   padding: 12px 20px; width: 100%; background: rgba(255,255,255,0.1); border-radius: 12px;
-                                   color: white; font-weight: 500; text-decoration: none; backdrop-filter: blur(10px);">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>For Courses and Classes</span>
-                                </a>
-                            </div>
-
                         </div>
                     </div>
-
-                    <!-- Right Column -->
-                    <div class="col-lg-4 col-md-12 mt-5 mt-lg-0" style="position: relative; bottom: 90px;">
-                        <!-- Video 1 -->
-                        <div class="video-gallery-image mb-3 wow fadeInUp" data-wow-delay="0.3s">
-                            <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video">
-                                <img src="images/graduation.jpg" alt="Video Gallery 1">
-                                <div class="play-btn"><i class="fas fa-play"></i></div>
-                                <div class="video-overlay-info">
-                                    <h5 class="video-name">John Doe</h5>
-                                    <p class="video-position">Creative Director</p>
-                                </div>
-                            </a>
+                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="video-section">
+                        <div style="position: relative;">
+                            <img src="images/graduation.jpg" alt="Sakka Demo" class="video-thumbnail" />
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <div class="video-caption">Sakka Demo</div>
                         </div>
+                    </a>
+                </div>
 
-                        <!-- Video 2 -->
-                        <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="https://www.youtube.com/watch?v=oUFJJNQGwhk" class="popup-video">
-                                <img src="images/graduation.jpg" alt="Video Gallery 2">
-                                <div class="play-btn"><i class="fas fa-play"></i></div>
-                                <div class="video-overlay-info">
-                                    <h5 class="video-name">Jane Smith</h5>
-                                    <p class="video-position">Marketing Head</p>
-                                </div>
-                            </a>
+                <!-- Premium Pro Service Card -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-title">Premium Pro Service</h3>
+                        <div class="service-buttons">
+                            <a href="#" class="visit-btn">Visit Website</a>
                         </div>
                     </div>
-
+                    <a href="https://www.youtube.com/watch?v=oUFJJNQGwhk" class="video-section">
+                        <div style="position: relative;">
+                            <img src="images/graduation.jpg" alt="Premium Demo" class="video-thumbnail" />
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <div class="video-caption">Premium Demo</div>
+                        </div>
+                    </a>
                 </div>
             </div>
-
-            <div class="hero-company-slider">
-                <!-- Company slider content can be added here -->
-            </div>
         </div>
+    </div>
+</body>
+
+ 
 
 
 

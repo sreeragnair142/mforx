@@ -7852,7 +7852,7 @@ header.main-header .header-sticky.active {
         .video-gallery-image a {
             display: block;
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
             position: relative;
             text-decoration: none;
         }
