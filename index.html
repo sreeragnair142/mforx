@@ -22,6 +22,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -45,19 +46,53 @@
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
 
+    <style>
+        /* UPDATED: Modern Dark Flowchart Styles */
+        .flowchart-section {
+            padding: 100px 0;
+            /* background-color: #111; */
+            /* Dark background for the section */
+        }
 
+        .flowchart-section .section-title h3 {
+            color: #ccc;
+        }
+
+        .flowchart-section .section-title h2 {
+            color: #fff;
+            /* White text for titles */
+        }
+
+        .flowchart-section .section-title h2 span {
+            /* Keep span color or adjust if needed */
+            color: #6c5ce7;
+        }
+
+
+        .mermaid-container {
+            background-color: #1a1a1a;
+            /* Slightly lighter dark card */
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid #333;
+            overflow-x: auto;
+            /* Ensures flowchart is scrollable on small screens */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 600px; /* MODIFIED: Increased height */
+        }
+
+        .mermaid {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Preloader Start -->
-    <!-- <div class="preloader">
-        <div class="loading-container">
-            <div class="loading"></div>
-            <div id="loading-icon"><img src="images/loader.svg" alt=""></div>
-        </div>
-    </div> -->
-    <!-- Preloader End -->
+
 
     <!-- Header Start -->
     <header class="main-header">
@@ -75,66 +110,15 @@
                         <div class="nav-menu-wrapper">
                             <ul class="navbar-nav mr-auto" id="menu">
                                 <li class=""><a class="nav-link" href="index.html">Home</a>
-                                    <!-- <ul>
-                                        <li class="nav-item"><a class="nav-link" href="index.html">Home - Main</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-image.html">Home -
-                                                Image</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="index-video.html">Home -
-                                                Video</a></li>
-                                    </ul> -->
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
                                 <li class="nav-item"><a class="nav-link" href="sabcaecosystem.html">sabka Ecosystem</a>
                                 </li>
-                                <!-- <li class="nav-item"><a class="nav-link" href="#">Blog</a></li> -->
-                                <!-- <li class="nav-item submenu"><a class="nav-link" href="#">Pages</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="service-single.html">Service
-                                                Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog
-                                                Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="project-single.html">Projects
-                                                details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="team-single.html">Team
-                                                Details</a></li>
-                                        <li class="nav-item"><a class="nav-link"
-                                                href="testimonials.html">Testimonials</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="image-gallery.html">Image
-                                                Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="video-gallery.html">Video
-                                                Gallery</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li> -->
-
                                 <li class="nav-item"><a class="nav-link" href="investorcorner.html">Investor Corner</a>
                                 </li>
-
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
-
-                        <!-- Header App Buttons Start -->
-                        <!-- <div class="header-app-buttons">
-                            <a href="https://apps.apple.com" target="_blank" class="header-store-btn apple">
-                                <i class="fab fa-apple"></i>
-                                <span>App Store</span>
-                            </a>
-                            <a href="https://play.google.com/store" target="_blank" class="header-store-btn google">
-                                <i class="fab fa-google-play"></i>
-                                <span>Google Play</span>
-                            </a>
-                        </div> -->
-                        <!-- Header App Buttons End -->
-
-                        <!-- Header Btn Start -->
-                        <!-- <div class="header-btn">
-                            <a href="contact.html" class="btn-default">Get Started</a>
-                        </div> -->
-                        <!-- Header Btn End -->
                     </div>
                     <!-- Main Menu End -->
                     <div class="navbar-toggle"></div>
@@ -142,323 +126,11 @@
             </nav>
             <div class="responsive-menu"></div>
         </div>
-
-
     </header>
-
-
     <!-- Header End -->
 
     <!-- Hero Section Start -->
 
-
-    </head>
-
-   
-    
-    <style>
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-    background: rgba(0, 0, 0, 0.65); /* Darker */
-
-            z-index: 2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .section-title h2 {
-            color: white;
-            font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            line-height: 1.2;
-        }
-
-        .section-title span {
-            color: #4a90e2;
-        }
-
-        .hero-subtitle {
-            position: relative;
-            bottom: 30px;
-            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-            text-align: center;
-            font-weight: 400;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .services-container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            position: relative;
-            bottom: 30px;
-            background: rgba(10, 3, 34, 0.542);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-                justify-content: center;
-
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-            background: rgba(10, 3, 34, 0.9);
-        }
-
-        .service-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-    text-align: center;
-        }
-
-        .service-title {
-            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
-            font-weight: 700;
-            color: #c5c1c1;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .service-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .visit-btn {
-            background: linear-gradient(135deg, #2f0938b6, #0c104e9e);
-            color: rgb(195, 190, 190);
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            /* box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3); */
-        }
-
-        .visit-btn:hover {
-            background: linear-gradient(135deg, #0d04491a, #2b05427d);
-            transform: translateY(-2px);
-            /* box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4); */
-            color: white;
-        }
-
-        .app-store-links {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .app-store-links img {
-            height: 32px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .app-store-links img:hover {
-            transform: scale(1.05);
-        }
-
-        .video-section {
-            flex-shrink: 0;
-            width: 300px;
-            position: relative;
-            background: linear-gradient(135deg, #0e0631, #2e2565);
-            border-radius: 12px;
-            overflow: hidden;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .video-section:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-thumbnail {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4a90e2;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-
-        .play-button:hover {
-            background: white;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .video-caption {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: #ffffff;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .video-section:hover .video-caption {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                padding: 1rem;
-            }
-
-            .service-card {
-                flex-direction: column;
-                text-align: center;
-                gap: 1.5rem;
-                padding: 1.5rem 1rem;
-            }
-
-            .video-section {
-                width: 100%;
-                max-width: 350px;
-                order: -1;
-            }
-
-            .service-content {
-                align-items: center;
-            }
-
-            .service-buttons {
-                align-items: center;
-                width: 100%;
-            }
-
-            .visit-btn {
-                width: 100%;
-                max-width: 250px;
-                text-align: center;
-            }
-
-            .app-store-links {
-                justify-content: center;
-            }
-
-            .services-container {
-                gap: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-content {
-                padding: 0.5rem;
-            }
-
-            .service-card {
-                padding: 1rem;
-                gap: 1rem;
-            }
-
-            .hero-subtitle {
-                margin-bottom: 2rem;
-            }
-
-            .app-store-links img {
-                height: 28px;
-            }
-
-            .video-thumbnail {
-                height: 180px;
-            }
-
-            .play-button {
-                width: 40px;
-                height: 40px;
-                font-size: 14px;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .mb-5 {
-            margin-bottom: 3rem;
-        }
-
-        .wow {
-            visibility: visible;
-            animation-name: fadeInUp;
-        }
-    </style>
-</head>
-
-<body>
     <div class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="images/sabcanew.mp4" type="video/mp4" />
@@ -468,28 +140,41 @@
         <div class="hero-content">
             <div class="section-title text-center mb-5">
                 <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                    Welcome to SABCA World of <span>Opportunities</span>
+                    Welcome to SABKA World of <span>Opportunities</span>
                 </h2>
             </div>
             <p class="hero-subtitle">Choose Your Preferred Service From Below</p>
 
             <div class="services-container">
+                
                 <!-- Self Services Platform Card -->
+                 
                 <div class="service-card">
                     <div class="service-content">
-                        <h3 class="service-title">Self Services Platforms</h3>
-                        <div class="service-buttons">
-                            <a href="#" class="visit-btn">Visit Website</a>
-                            <div class="app-store-links">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                    alt="Google Play" />
-                                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                    alt="App Store" />
+                        <div class="left-content">
+                            <h3 class="service-title">
+                                <b>Self Services</b><br />
+                                <span>Platforms</span>
+                            </h3>
+                            <a href="#" class="visit-btn-self">Visit Website</a>
+                        </div>
+
+                        <div class="right-content">
+                            <div class="app-buttons">
+                                <a href="#" class="get-app-btn">Get The App</a>
+                                <div class="app-store-links">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Google Play" />
+                                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                        alt="App Store" />
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Video Section -->
                     <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="video-section">
-                        <div style="position: relative;">
+                        <div class="video-wrapper">
                             <img src="images/graduation.jpg" alt="Sakka Demo" class="video-thumbnail" />
                             <div class="play-button"><i class="fas fa-play"></i></div>
                             <div class="video-caption">Sakka Demo</div>
@@ -500,13 +185,18 @@
                 <!-- Premium Pro Service Card -->
                 <div class="service-card">
                     <div class="service-content">
-                        <h3 class="service-title">Premium Pro Service</h3>
-                        <div class="service-buttons">
-                            <a href="#" class="visit-btn">Visit Website</a>
+                        <div class="left-content">
+                            <h3 class="service-title">
+                                <b>Premium Pro</b><br />
+                                <span id="service">Service</span>
+                            </h3>
+                            <a href="#" class="visit-btn-premium">Visit Website</a>
                         </div>
                     </div>
+
+                    <!-- Video Section -->
                     <a href="https://www.youtube.com/watch?v=oUFJJNQGwhk" class="video-section">
-                        <div style="position: relative;">
+                        <div class="video-wrapper">
                             <img src="images/graduation.jpg" alt="Premium Demo" class="video-thumbnail" />
                             <div class="play-button"><i class="fas fa-play"></i></div>
                             <div class="video-caption">Premium Demo</div>
@@ -514,1469 +204,1711 @@
                     </a>
                 </div>
             </div>
+
+        </div>
+    </div>
+    <!-- Hero Section End -->
+    <style>
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+
+        .service-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* .left-content {
+  flex: 1;
+} */
+
+        .right-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .visit-btn-self,
+        .visit-btn-premium {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 20px 30px;
+            background-color: #321549ac;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 50px;
+        }
+
+        .get-app-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            /* background-color: #24053dac; */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 50px;
+        }
+
+        .app-store-links img {
+            width: 120px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                flex: 1 1 100%;
+            }
+
+            .service-content {
+                flex-direction: column;
+            }
+
+            .right-content {
+                align-items: center;
+            }
+        }
+
+        /* Base layout (desktop default) */
+        /* .services-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+} */
+
+        /* .service-card {
+  background: linear-gradient(to right, #1c1c3b, #2e003e);
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+} */
+
+        .service-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-title {
+            font-size: 29px;
+            letter-spacing: 1.5px;
+        }
+
+        .service-title span {
+            margin-right: 70px;
+            font-weight: normal;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .visit-btn,
+        .visit-btnn,
+        .standalone {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #080533af;
+            padding: 18px 25px;
+            /* border-radius: 8px; */
+            color: white;
+            text-decoration: none;
+        }
+
+        .button-icon-group {
+            text-align: center;
+        }
+
+        .app-store-links img {
+            height: 40px;
+            margin-top: 0.5rem;
+        }
+
+        /* Video styling */
+        .video-section {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: white;
+        }
+
+        .video-caption {
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        /* ✅ MOBILE STYLES */
+        @media (max-width: 768px) {
+            .service-content {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+
+            .left-content,
+            .right-content {
+                width: 100%;
+            }
+
+            .service-title {
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+
+            .service-title span {
+                font-size: 18px;
+                letter-spacing: 0.5px;
+            }
+
+            .visit-btn,
+            .visit-btnn,
+            .standalone {
+                margin: 1rem auto;
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+
+            .app-store-links {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .app-store-links img {
+                height: 36px;
+            }
+
+            .service-buttons {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+    <style>
+        .video-gallery-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-gallery-image figure img {
+            width: 100%;
+            display: block;
+        }
+
+        .video-overlay-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .video-gallery-image:hover .video-overlay-info {
+            opacity: 1;
+        }
+
+        .video-overlay-info h5 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .video-overlay-info span {
+            font-size: 14px;
+            display: block;
+            margin-top: 4px;
+        }
+    </style>
+
+
+    <div class="page-video-gallery" style="position: relative; bottom: 80px">
+        <div class="container">
+            <!-- Video Gallery Header Start -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center mb-5">
+                        <h3 class="wow fadeInUp" style="margin-top: 150px;">Videos</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
+                            Video <span>Corner</span>
+                        </h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.4s">
+                            Explore our collection of inspiring stories, success journeys, and behind-the-scenes
+                            moments
+                            that showcase our commitment to transforming careers and empowering individuals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Gallery Header End -->
+
+            <!-- Swiper Slider Start -->
+            <div class="page-video-gallery">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Video Gallery start -->
+                            <div class="video-gallery-image wow fadeInUp">
+                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                    data-cursor-text="Play">
+                                    <figure>
+                                        <img src="images/gallery-3.jpg" alt="">
+                                    </figure>
+                                    <div class="video-overlay-info">
+                                        <h5>John Doe</h5>
+                                        <span>Marketing Head</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Video Gallery end -->
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Video Gallery start -->
+                            <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.2s">
+                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                    data-cursor-text="Play">
+                                    <figure>
+                                        <img src="images/gallery-5.jpg" alt="">
+                                    </figure>
+                                    <div class="video-overlay-info">
+                                        <h5>John Doe</h5>
+                                        <span>Marketing Head</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Video Gallery end -->
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Video Gallery start -->
+                            <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                    data-cursor-text="Play">
+                                    <figure>
+                                        <img src="images/gallery-2.jpg" alt="">
+                                    </figure>
+                                    <div class="video-overlay-info">
+                                        <h5>John Doe</h5>
+                                        <span>Marketing Head</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Video Gallery end -->
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Video Gallery start -->
+                            <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.6s">
+                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                    data-cursor-text="Play">
+                                    <figure>
+                                        <img src="images/gallery-1.jpg" alt="">
+                                    </figure>
+                                    <div class="video-overlay-info">
+                                        <h5>John Doe</h5>
+                                        <span>Marketing Head</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Video Gallery end -->
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Video Gallery start -->
+                            <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.8s">
+                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                    data-cursor-text="Play">
+                                    <figure>
+                                        <img src="images/gallery-4.jpg" alt="">
+                                    </figure>
+                                    <div class="video-overlay-info">
+                                        <h5>John Doe</h5>
+                                        <span>Marketing Head</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Video Gallery end -->
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <!-- Video Gallery start -->
+                            <div class="video-gallery-image wow fadeInUp" data-wow-delay="1.6s">
+                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
+                                    data-cursor-text="Play">
+                                    <figure>
+                                        <img src="images/gallery-7.jpg" alt="">
+                                    </figure>
+                                    <div class="video-overlay-info">
+                                        <h5>John Doe</h5>
+                                        <span>Marketing Head</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Video Gallery end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Us Section Start -->
+            <div class="about-us">
+                <div class="container">
+                    <div class="row section-row align-items-center">
+                        <div class="col-lg-12">
+                            <!-- Section Title Start -->
+                            <div class="section-title section-title-center">
+                                <h3 class="wow fadeInUp">About Us</h3>
+                                <h4 class="text-effect" data-cursor="-opaque"
+                                    style="font-size: 30px; font-weight: 100;">Sabka
+                                    is India’s next-generation employment platform, designed to simplify job search
+                                    and
+                                    hiring
+                                    through advanced technology.
+
+                                </h4>
+                            </div>
+                            <!-- Section Title End -->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <!-- About Us Box Start -->
+                            <div class="about-us-box">
+                                <!-- About Us Item Start -->
+                                <div class="about-us-item">
+                                    <div class="about-item-content">
+                                        <h3>Job Seekers Hired Daily</h3>
+                                        <h2><span class="counter">298</span>+</h2>
+                                    </div>
+                                    <div class="icon-box">
+                                        <img src="images/icon-about-item-1.svg" alt="">
+                                    </div>
+                                </div>
+                                <!-- About Us Item End -->
+
+                                <!-- About Item Image Start -->
+                                <div class="about-item-image">
+                                    <img src="images/about-item-image-1.png" alt="">
+                                </div>
+                                <!-- About Item Image End -->
+                            </div>
+                            <!-- About Us Box End -->
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <!-- About Us Box Start -->
+                            <div class="about-us-box">
+                                <!-- About Us Item Start -->
+                                <div class="about-us-item">
+                                    <div class="about-item-content">
+                                        <h3>Verified Companies</h3>
+                                        <h2><span class="counter">978</span>+</h2>
+                                    </div>
+                                    <div class="icon-box">
+                                        <img src="images/icon-about-item-2.svg" alt="">
+                                    </div>
+                                </div>
+                                <!-- About Us Item End -->
+
+                                <!-- About Item Image Start -->
+                                <div class="about-item-image">
+                                    <img src="images/about-item-image-2.png" alt="">
+                                </div>
+                                <!-- About Item Image End -->
+                            </div>
+                            <!-- About Us Box End -->
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <!-- About Us Box Start -->
+                            <div class="about-us-box">
+                                <!-- About Us Item Start -->
+                                <div class="about-us-item">
+                                    <div class="about-item-content">
+                                        <h3>Instant Profile Creation</h3>
+                                        <h2><span class="counter">300</span>%</h2>
+                                    </div>
+                                    <div class="icon-box">
+                                        <img src="images/icon-about-item-3.svg" alt="">
+                                    </div>
+                                </div>
+                                <!-- About Us Item End -->
+
+                                <!-- About Item Image Start -->
+                                <div class="about-item-image">
+                                    <img src="images/about-item-image-3.png" alt="">
+                                </div>
+                                <!-- About Item Image End -->
+                            </div>
+                            <!-- About Us Box End -->
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <!-- About Us Box Start -->
+                            <div class="about-us-box">
+                                <!-- About Us Item Start -->
+                                <div class="about-us-item">
+                                    <div class="about-item-content">
+                                        <h3>Direct Connect Success</h3>
+                                        <h2><span class="counter">95</span>X</h2>
+                                    </div>
+                                    <div class="icon-box">
+                                        <img src="images/icon-about-item-4.svg" alt="">
+                                    </div>
+                                </div>
+                                <!-- About Us Item End -->
+
+                                <!-- About Item Image Start -->
+                                <div class="about-item-image">
+                                    <img src="images/about-item-image-4.png" alt="">
+                                </div>
+                                <!-- About Item Image End -->
+                            </div>
+                            <!-- About Us Box End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Us Section End -->
+
+            <!-- Sabka Ecosystem Flowchart Section Start (UPDATED) -->
+           <div class="flowchart-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title section-title-center">
+          <h3 class="wow fadeInUp">Our Ecosystem</h3>
+          <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
+            Sabka Ecosystem <span>Flowchart</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+<img src="images/ok1.png" alt="">      </div>
+    </div>
+  </div>
+</div>
+
+            <style>
+                .mermaid-container {
+                    width: 100%;
+                    overflow-x: auto;
+                    /* Allow horizontal scroll if needed */
+                }
+
+                .mermaid {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            </style>
+
+
+            <!-- Sabka Ecosystem Flowchart Section End (UPDATED) -->
+
+            <!-- Gallery Section Start -->
+            <style>
+                .image-anime {
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .image-anime img {
+                    width: 100%;
+                    display: block;
+                    transition: 0.3s ease;
+                }
+
+                .overlay-text {
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(15, 15, 15, 0.8);
+                    color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.4s ease;
+                    text-align: center;
+                }
+
+                .image-anime:hover .overlay-text {
+                    top: 0;
+                }
+
+                .overlay-text h4 {
+                    font-size: 18px;
+                    margin-bottom: 6px;
+                }
+
+                .overlay-text p {
+                    font-size: 14px;
+                    margin: 0;
+                }
+            </style>
+
+            <div class="col-lg-12">
+                <div class="section-title section-title-center">
+                    <h3 class="wow fadeInUp">Gallery with Title</h3>
+                </div>
+            </div>
+
+            <div class="page-gallery">
+                <div class="container">
+                    <div class="row gallery-items page-gallery-box">
+                        <!-- Repeat block for each image -->
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp">
+                                <a href="images/gallery-1.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-1.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>John Doe</h4>
+                                            <p>Photographer</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s">
+                                <a href="images/gallery-2.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-2.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Jane Smith</h4>
+                                            <p>Creative Director</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="images/gallery-3.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-3.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Mike Johnson</h4>
+                                            <p>Designer</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s">
+                                <a href="images/gallery-4.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-4.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Emily Brown</h4>
+                                            <p>Artist</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s">
+                                <a href="images/gallery-5.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-5.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Chris Lee</h4>
+                                            <p>Developer</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="1s">
+                                <a href="images/gallery-6.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-6.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Alice White</h4>
+                                            <p>Producer</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="1.2s">
+                                <a href="images/gallery-7.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-7.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Robert Green</h4>
+                                            <p>Manager</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="1.4s">
+                                <a href="images/gallery-8.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-8.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Sara Black</h4>
+                                            <p>Editor</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-6">
+                            <div class="photo-gallery wow fadeInUp" data-wow-delay="1.6s">
+                                <a href="images/gallery-9.jpg" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/gallery-9.jpg" alt="">
+                                        <div class="overlay-text">
+                                            <h4>Tom Wilson</h4>
+                                            <p>Lead Artist</p>
+                                        </div>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gallery Section End -->
+
+            <style>
+                .slider-container {
+                    overflow: hidden;
+                    width: 100%;
+                    position: relative;
+                }
+
+                .slider-wrapper {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    width: calc(100% * 2);
+                    /* 12 projects (6 original + 6 duplicates) for seamless loop */
+                }
+
+                .project-slide {
+                    flex: 0 0 16.666%;
+                    /* 100% / 6 = 16.666% for 6 projects visible */
+                    padding: 0 10px;
+                    box-sizing: border-box;
+                }
+
+                .project-item {
+                    height: 100%;
+                }
+
+                /* Responsive adjustments */
+                @media (max-width: 1200px) {
+                    .project-slide {
+                        flex: 0 0 25%;
+                        /* 4 slides visible */
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .project-slide {
+                        flex: 0 0 50%;
+                        /* 2 slides visible */
+                    }
+
+                    .section-title h2 {
+                        font-size: 28px;
+                    }
+
+                    .container-fluid {
+                        padding: 0 15px;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .project-slide {
+                        flex: 0 0 100%;
+                    }
+
+                    .section-title h2 {
+                        font-size: 24px;
+                    }
+
+                    .project-content {
+                        padding: 15px;
+                    }
+
+                    .project-image {
+                        height: 500px;
+                    }
+
+                    .project-content p {
+                        padding-right: 300px;
+                        font-size: 14px;
+                        line-height: 1.6;
+
+                    }
+                }
+            </style>
         </div>
     </div>
 
 
- 
+    <div class="what-we-do">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- What We Box Start -->
+                    <div class="what-we-box">
+                        <h3 class="text-effect">We fuse technology, purpose, and innovation to create scalable,
+                            employment-ready solutions that empower individuals and drive inclusive growth.</h3>
 
-
-
-        <!-- Hero Section End -->
-
-
-
-
-
-
-
-
-        <style>
-            .video-gallery-image {
-                position: relative;
-                overflow: hidden;
-            }
-
-            .video-gallery-image figure img {
-                width: 100%;
-                display: block;
-            }
-
-            .video-overlay-info {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                padding: 15px;
-                background: rgba(0, 0, 0, 0.6);
-                color: #fff;
-                text-align: center;
-                opacity: 0;
-                transition: 0.3s ease;
-            }
-
-            .video-gallery-image:hover .video-overlay-info {
-                opacity: 1;
-            }
-
-            .video-overlay-info h5 {
-                margin: 0;
-                font-size: 16px;
-                font-weight: bold;
-            }
-
-            .video-overlay-info span {
-                font-size: 14px;
-                display: block;
-                margin-top: 4px;
-            }
-        </style>
-
-
-        <div class="page-video-gallery" style="position: relative; bottom: 80px">
-            <div class="container">
-                <!-- Video Gallery Header Start -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center mb-5">
-                            <h3 class="wow fadeInUp" style="margin-top: 150px;">Videos</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                                Video <span>Corner</span>
-                            </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s">
-                                Explore our collection of inspiring stories, success journeys, and behind-the-scenes
-                                moments
-                                that showcase our commitment to transforming careers and empowering individuals.
-                            </p>
+                        <!-- What We Image Start -->
+                        <div class="what-we-img wow fadeInUp" data-wow-delay="0.2s">
+                            <img src="images/ChatGPT Image Jun 18, 2025, 01_02_13 PM.png" alt="">
                         </div>
-                    </div>
-                </div>
-                <!-- Video Gallery Header End -->
+                        <!-- What We Image End -->
 
-                <!-- Swiper Slider Start -->
-                <div class="page-video-gallery">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <!-- Video Gallery start -->
-                                <div class="video-gallery-image wow fadeInUp">
-                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
-                                        data-cursor-text="Play">
-                                        <figure>
-                                            <img src="images/gallery-3.jpg" alt="">
-                                        </figure>
-                                        <div class="video-overlay-info">
-                                            <h5>John Doe</h5>
-                                            <span>Marketing Head</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Video Gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6">
-                                <!-- Video Gallery start -->
-                                <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.2s">
-                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
-                                        data-cursor-text="Play">
-                                        <figure>
-                                            <img src="images/gallery-5.jpg" alt="">
-                                        </figure>
-                                        <div class="video-overlay-info">
-                                            <h5>John Doe</h5>
-                                            <span>Marketing Head</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Video Gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6">
-                                <!-- Video Gallery start -->
-                                <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.4s">
-                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
-                                        data-cursor-text="Play">
-                                        <figure>
-                                            <img src="images/gallery-2.jpg" alt="">
-                                        </figure>
-                                        <div class="video-overlay-info">
-                                            <h5>John Doe</h5>
-                                            <span>Marketing Head</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Video Gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6">
-                                <!-- Video Gallery start -->
-                                <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.6s">
-                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
-                                        data-cursor-text="Play">
-                                        <figure>
-                                            <img src="images/gallery-1.jpg" alt="">
-                                        </figure>
-                                        <div class="video-overlay-info">
-                                            <h5>John Doe</h5>
-                                            <span>Marketing Head</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Video Gallery end -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6">
-                                <!-- Video Gallery start -->
-                                <div class="video-gallery-image wow fadeInUp" data-wow-delay="0.8s">
-                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
-                                        data-cursor-text="Play">
-                                        <figure>
-                                            <img src="images/gallery-4.jpg" alt="">
-                                        </figure>
-                                        <div class="video-overlay-info">
-                                            <h5>John Doe</h5>
-                                            <span>Marketing Head</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Video Gallery end -->
-                            </div>
-
-
-
-
-
-
-
-                            <div class="col-lg-4 col-md-6">
-                                <!-- Video Gallery start -->
-                                <div class="video-gallery-image wow fadeInUp" data-wow-delay="1.6s">
-                                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"
-                                        data-cursor-text="Play">
-                                        <figure>
-                                            <img src="images/gallery-7.jpg" alt="">
-                                        </figure>
-                                        <div class="video-overlay-info">
-                                            <h5>John Doe</h5>
-                                            <span>Marketing Head</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Video Gallery end -->
-                            </div>
+                        <!-- What We Image List Start -->
+                        <div class="what-we-img-list wow fadeInUp" data-wow-delay="0.4s">
+                            <ul>
+                                <li>Skill Mapping Intelligence</li>
+                                <li>Career Pathway Modeling</li>
+                                <li>AI-Enabled Job Matching</li>
+                                <li>Workforce Analytics</li>
+                            </ul>
                         </div>
+                        <!-- What We Image List End -->
                     </div>
+                    <!-- What We Box End -->
                 </div>
 
+                <div class="col-lg-6">
+                    <!-- What We Do Content Start -->
+                    <div class="what-we-do-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Our Vision & Mission</h3>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Innovative
+                                Hiring,<span> Meaningful Employment</span></h2>
 
-
-                <section class="roadmap">
-                    <img src="images/line.png" alt="" class="img-line">
-                    <div class="shape"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="section-title section-title-center">
-                                    <h3 class="wow fadeInUp">sabka world ecosystem</h3>
-                                    <h2 class="wow fadeInUp" data-wow-delay="0.2s">A Structured model for
-                                        <span>Employment, Empowerment, and Scalable Investment.</span>
-                                    </h2>
-                                </div>
+                            <!-- Vision Section -->
+                            <div class="vision-section wow fadeInUp" data-wow-delay="0.4s">
+                                <h4 style="color: #6c5ce7; font-weight: 600; margin-bottom: 15px;">OUR VISION</h4>
+                                <p style="margin-bottom: 25px;">To illuminate the lives of millions by eradicating
+                                    unemployment, connecting talent with the right opportunities, and empowering
+                                    individuals to secure a better future. Through technology and skill development,
+                                    we
+                                    aim to reshape the job market, ensuring that no potential goes untapped and
+                                    every
+                                    family experiences the dignity of meaningful employment.</p>
                             </div>
 
-                            <!-- Desktop View -->
-                            <div class="desktop-view">
-                                <div class="roadmap__main" data-aos="fade-up" data-aos-duration="2000">
-                                    <div class="section-title">
-                                        <h3 class="wow fadeInUp">Emforx Solutions Pvt Ltd</h3>
-                                    </div>
-
-                                    <div class="section-title">
-                                        <h3 class="wow fadeInUp">Sabka Care Foundation</h3>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Sabka Job App - The Mobile Application</h5>
-                                            <p class="text">An open platform connecting job seekers with employers
-                                                without Intermediaries.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box right">
-                                        <div class="content">
-                                            <h5 class="title">Education</h5>
-                                            <p class="text">Providing quality educational resources, scholarships, and
-                                                learning opportunities to underprivileged students and youth.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">www.sabkaworld.com - The Website</h5>
-                                            <p class="text">A nationwide open platform providing extensive job listings,
-                                                career resources, and employer branding solutions.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box right">
-                                        <div class="content">
-                                            <h5 class="title">Employment</h5>
-                                            <p class="text">Free training programs, job placement assistance, and career
-                                                guidance for those seeking meaningful employment opportunities.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Sabka Pro Hiring - Professional Recruitment Service</h5>
-                                            <p class="text">The professional recruitment arm for structured hiring
-                                                solutions. We don't just connect people to jobs - we guide them, add
-                                                real value, uphold ethics, and help them build a better future.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box right">
-                                        <div class="content">
-                                            <h5 class="title">Empowerment</h5>
-                                            <p class="text">Supporting individuals with essential resources like food,
-                                                clothing, accommodation, and travel assistance for job interviews.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Sabka Skill Academy - The Job Preparation Studio</h5>
-                                            <p class="text">A learning platform to upskill job seekers for better
-                                                careers.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box right">
-                                        <div class="content">
-                                            <h5 class="title">Engagement</h5>
-                                            <p class="text">Building strong community connections through mentorship
-                                                programs, networking events, and ongoing support systems.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <!-- <h5 class="title">Sabka Skill Academy - The Job Preparation Studio</h5> -->
-                                            <p class="text">
-                                                <strong>The Engine Behind Sabka’s Vision.</strong> Emforx is the parent
-                                                company powering an integrated ecosystem built to solve India’s
-                                                employment and skill-gap crisis through scalable technology and
-                                                human-centric platforms:
-                                            </p>
-                                            <ul class="text">
-                                                <li>Sabkaworld.com & Sabka Mobile App – A nationwide open platform for
-                                                    job seekers and employers</li>
-                                                <li>Sabka Pro Hiring & Sabka Visa – Technology powered Domestic and
-                                                    International recruitment</li>
-                                                <li>Sabka Skill Academy – Practical, industry-aligned job training and
-                                                    upskilling programs</li>
-                                            </ul>
-                                            <p class="text">
-                                                <strong>Mission:</strong> To be India’s most trusted name in employment
-                                                – Locally and Globally.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <!-- ✅ Excellence on RIGHT side -->
-                                    <div class="roadmap-box right" style="height: 200px;">
-                                        <div class="content">
-                                            <h5 class="title">Excellence</h5>
-                                            <p class="text">Maintaining high standards in all programs while
-                                                continuously innovating to deliver maximum impact and sustainable
-                                                outcomes.</p>
-                                        </div>
-                                    </div>
-
-
-                                </div>
+                            <!-- Mission Section -->
+                            <div class="mission-section wow fadeInUp" data-wow-delay="0.6s">
+                                <h4 style="color: #6c5ce7; font-weight: 600; margin-bottom: 15px;">OUR MISSION</h4>
+                                <p>Sabka is on a mission to revolutionize employment by bridging the gap between job
+                                    seekers and industries, fostering a future where every skilled individual finds
+                                    the
+                                    right opportunity. We equip job seekers with essential, future-proof skills
+                                    while
+                                    enabling employers to navigate the challenges of an AI-driven world. By tackling
+                                    unemployment at its core, we strive to build a workforce that is resilient,
+                                    adaptable, and ready to drive economic growth.</p>
                             </div>
-
-                            <!-- Mobile View -->
-                            <div class="mobile-view">
-                                <div class="section-title">
-                                    <h3 class="wow fadeInUp">Emforx Solutions Pvt Ltd</h3>
-                                </div>
-
-                                <div class="roadmap__main" data-aos="fade-up" data-aos-duration="2000">
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Sabka Job App - The Mobile Application</h5>
-                                            <p class="text">An open platform connecting job seekers with employers
-                                                without Intermediaries.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">www.sabkaworld.com - The Website</h5>
-                                            <p class="text">A nationwide open platform providing extensive job listings,
-                                                career resources, and employer branding solutions.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Sabka Pro Hiring - Professional Recruitment Service</h5>
-                                            <p class="text">The professional recruitment arm for structured hiring
-                                                solutions. We don't just connect people to jobs - we guide them, add
-                                                real value, uphold ethics, and help them build a better future.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Sabka Skill Academy - The Job Preparation Studio</h5>
-                                            <p class="text">A learning platform to upskill job seekers for better
-                                                careers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="section-title">
-                                    <h3 class="wow fadeInUp">Sabka Care Foundation</h3>
-                                </div>
-
-                                <div class="roadmap__main" data-aos="fade-up" data-aos-duration="2000">
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Education</h5>
-                                            <p class="text">Providing quality educational resources, scholarships, and
-                                                learning opportunities to underprivileged students and youth.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Employment</h5>
-                                            <p class="text">Free training programs, job placement assistance, and career
-                                                guidance for those seeking meaningful employment opportunities.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Empowerment</h5>
-                                            <p class="text">Supporting individuals with essential resources like food,
-                                                clothing, accommodation, and travel assistance for job interviews.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Engagement</h5>
-                                            <p class="text">Building strong community connections through mentorship
-                                                programs, networking events, and ongoing support systems.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="roadmap-box">
-                                        <div class="content">
-                                            <h5 class="title">Excellence</h5>
-                                            <p class="text">Maintaining high standards in all programs while
-                                                continuously innovating to deliver maximum impact and sustainable
-                                                outcomes.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                        <!-- Section Title End -->
+
+                        <!-- What We Do Body Start -->
+                        <div class="what-we-do-body wow fadeInUp" data-wow-delay="0.8s">
+                            <ul>
+                                <li>Skill Development</li>
+                                <li>Job Market Access</li>
+                                <li>AI-Driven Training</li>
+                                <li>Opportunity Matching</li>
+                                <li>Employment Empowerment</li>
+                            </ul>
+                        </div>
+                        <!-- What We Do Body End -->
+
+                        <!-- What We Do Button Start -->
+                        <div class="what-we-do-button wow fadeInUp" data-wow-delay="1.0s">
+                            <a href="contact.html" class="btn-default">contact us</a>
+                        </div>
+                        <!-- What We Do Button End -->
                     </div>
-                </section>
-
-
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const elements = document.querySelectorAll('.wow, [data-aos]');
-                        elements.forEach(el => {
-                            el.classList.add('fadeInUp');
-                            if (el.hasAttribute('data-aos')) {
-                                el.classList.add('aos-animate');
-                            }
-                        });
-                    });
-
-                    window.addEventListener('scroll', function () {
-                        const elements = document.querySelectorAll('[data-aos]');
-                        elements.forEach(el => {
-                            const rect = el.getBoundingClientRect();
-                            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                                el.classList.add('aos-animate');
-                            }
-                        });
-                    });
-                </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- About Us Section Start -->
-                <div class="about-us">
-                    <div class="container">
-                        <div class="row section-row align-items-center">
-                            <div class="col-lg-12">
-                                <!-- Section Title Start -->
-                                <div class="section-title section-title-center">
-                                    <h3 class="wow fadeInUp">About Us</h3>
-                                    <h4 class="text-effect" data-cursor="-opaque"
-                                        style="font-size: 30px; font-weight: 100;">Sabka
-                                        is India’s next-generation employment platform, designed to simplify job search
-                                        and
-                                        hiring
-                                        through advanced technology.
-
-                                    </h4>
-                                </div>
-                                <!-- Section Title End -->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6">
-                                <!-- About Us Box Start -->
-                                <div class="about-us-box">
-                                    <!-- About Us Item Start -->
-                                    <div class="about-us-item">
-                                        <div class="about-item-content">
-                                            <h3>Job Seekers Hired Daily</h3>
-                                            <h2><span class="counter">298</span>+</h2>
-                                        </div>
-                                        <div class="icon-box">
-                                            <img src="images/icon-about-item-1.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- About Us Item End -->
-
-                                    <!-- About Item Image Start -->
-                                    <div class="about-item-image">
-                                        <img src="images/about-item-image-1.png" alt="">
-                                    </div>
-                                    <!-- About Item Image End -->
-                                </div>
-                                <!-- About Us Box End -->
-                            </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <!-- About Us Box Start -->
-                                <div class="about-us-box">
-                                    <!-- About Us Item Start -->
-                                    <div class="about-us-item">
-                                        <div class="about-item-content">
-                                            <h3>Verified Companies</h3>
-                                            <h2><span class="counter">978</span>+</h2>
-                                        </div>
-                                        <div class="icon-box">
-                                            <img src="images/icon-about-item-2.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- About Us Item End -->
-
-                                    <!-- About Item Image Start -->
-                                    <div class="about-item-image">
-                                        <img src="images/about-item-image-2.png" alt="">
-                                    </div>
-                                    <!-- About Item Image End -->
-                                </div>
-                                <!-- About Us Box End -->
-                            </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <!-- About Us Box Start -->
-                                <div class="about-us-box">
-                                    <!-- About Us Item Start -->
-                                    <div class="about-us-item">
-                                        <div class="about-item-content">
-                                            <h3>Instant Profile Creation</h3>
-                                            <h2><span class="counter">300</span>%</h2>
-                                        </div>
-                                        <div class="icon-box">
-                                            <img src="images/icon-about-item-3.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- About Us Item End -->
-
-                                    <!-- About Item Image Start -->
-                                    <div class="about-item-image">
-                                        <img src="images/about-item-image-3.png" alt="">
-                                    </div>
-                                    <!-- About Item Image End -->
-                                </div>
-                                <!-- About Us Box End -->
-                            </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <!-- About Us Box Start -->
-                                <div class="about-us-box">
-                                    <!-- About Us Item Start -->
-                                    <div class="about-us-item">
-                                        <div class="about-item-content">
-                                            <h3>Direct Connect Success</h3>
-                                            <h2><span class="counter">95</span>X</h2>
-                                        </div>
-                                        <div class="icon-box">
-                                            <img src="images/icon-about-item-4.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- About Us Item End -->
-
-                                    <!-- About Item Image Start -->
-                                    <div class="about-item-image">
-                                        <img src="images/about-item-image-4.png" alt="">
-                                    </div>
-                                    <!-- About Item Image End -->
-                                </div>
-                                <!-- About Us Box End -->
-                            </div>
-                        </div>
-                    </div>
+                    <!-- What We Do Content End -->
                 </div>
-
-
-
-                <!-- Gallery Section Start -->
-                <style>
-                    .image-anime {
-                        position: relative;
-                        overflow: hidden;
-                    }
-
-                    .image-anime img {
-                        width: 100%;
-                        display: block;
-                        transition: 0.3s ease;
-                    }
-
-                    .overlay-text {
-                        position: absolute;
-                        top: -100%;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: rgba(15, 15, 15, 0.8);
-                        color: #fff;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        transition: 0.4s ease;
-                        text-align: center;
-                    }
-
-                    .image-anime:hover .overlay-text {
-                        top: 0;
-                    }
-
-                    .overlay-text h4 {
-                        font-size: 18px;
-                        margin-bottom: 6px;
-                    }
-
-                    .overlay-text p {
-                        font-size: 14px;
-                        margin: 0;
-                    }
-                </style>
-
-                <div class="col-lg-12">
-                    <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">Gallery with Title</h3>
-                    </div>
-                </div>
-
-                <div class="page-gallery">
-                    <div class="container">
-                        <div class="row gallery-items page-gallery-box">
-                            <!-- Repeat block for each image -->
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp">
-                                    <a href="images/gallery-1.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-1.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>John Doe</h4>
-                                                <p>Photographer</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s">
-                                    <a href="images/gallery-2.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-2.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Jane Smith</h4>
-                                                <p>Creative Director</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s">
-                                    <a href="images/gallery-3.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-3.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Mike Johnson</h4>
-                                                <p>Designer</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s">
-                                    <a href="images/gallery-4.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-4.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Emily Brown</h4>
-                                                <p>Artist</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s">
-                                    <a href="images/gallery-5.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-5.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Chris Lee</h4>
-                                                <p>Developer</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1s">
-                                    <a href="images/gallery-6.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-6.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Alice White</h4>
-                                                <p>Producer</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1.2s">
-                                    <a href="images/gallery-7.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-7.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Robert Green</h4>
-                                                <p>Manager</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1.4s">
-                                    <a href="images/gallery-8.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-8.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Sara Black</h4>
-                                                <p>Editor</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-6">
-                                <div class="photo-gallery wow fadeInUp" data-wow-delay="1.6s">
-                                    <a href="images/gallery-9.jpg" data-cursor-text="View">
-                                        <figure class="image-anime">
-                                            <img src="images/gallery-9.jpg" alt="">
-                                            <div class="overlay-text">
-                                                <h4>Tom Wilson</h4>
-                                                <p>Lead Artist</p>
-                                            </div>
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gallery Section End -->
-
-
-
-                <style>
-                    .slider-container {
-                        overflow: hidden;
-                        width: 100%;
-                        position: relative;
-                    }
-
-                    .slider-wrapper {
-                        display: flex;
-                        transition: transform 0.5s ease-in-out;
-                        width: calc(100% * 2);
-                        /* 12 projects (6 original + 6 duplicates) for seamless loop */
-                    }
-
-                    .project-slide {
-                        flex: 0 0 16.666%;
-                        /* 100% / 6 = 16.666% for 6 projects visible */
-                        padding: 0 10px;
-                        box-sizing: border-box;
-                    }
-
-                    .project-item {
-                        height: 100%;
-                    }
-
-
-                    /* Responsive adjustments */
-                    @media (max-width: 1200px) {
-                        .project-slide {
-                            flex: 0 0 25%;
-                            /* 4 slides visible */
-                        }
-                    }
-
-                    @media (max-width: 768px) {
-                        .project-slide {
-                            flex: 0 0 50%;
-                            /* 2 slides visible */
-                        }
-
-                        .section-title h2 {
-                            font-size: 28px;
-                        }
-
-                        .container-fluid {
-                            padding: 0 15px;
-                        }
-                    }
-
-                    @media (max-width: 576px) {
-                        .project-slide {
-                            flex: 0 0 100%;
-                        }
-
-                        .section-title h2 {
-                            font-size: 24px;
-                        }
-
-                        .project-content {
-                            padding: 15px;
-                        }
-
-                        .project-image {
-                            height: 500px;
-                        }
-
-                        .project-content p {
-                            padding-right: 300px;
-                            font-size: 14px;
-                            line-height: 1.6;
-
-                        }
-
-
-                    }
-                </style>
-
-
             </div>
         </div>
+    </div>
+
+
+
+
+
+
+    <div class="page-team">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h3>Out Team</h3>
+                    <!-- <h2>Special  <span>Features</span></h2> -->
+                </div>
+            </div>
         </div>
-        </div>
-
-
-
-        <div class="what-we-do">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <!-- What We Box Start -->
-                        <div class="what-we-box">
-                            <h3 class="text-effect">We fuse technology, purpose, and innovation to create scalable,
-                                employment-ready solutions that empower individuals and drive inclusive growth.</h3>
-
-                            <!-- What We Image Start -->
-                            <div class="what-we-img wow fadeInUp" data-wow-delay="0.2s">
-                                <img src="images/ChatGPT Image Jun 18, 2025, 01_02_13 PM.png" alt="">
-                            </div>
-                            <!-- What We Image End -->
-
-                            <!-- What We Image List Start -->
-                            <div class="what-we-img-list wow fadeInUp" data-wow-delay="0.4s">
-                                <ul>
-                                    <li>Skill Mapping Intelligence</li>
-                                    <li>Career Pathway Modeling</li>
-                                    <li>AI-Enabled Job Matching</li>
-                                    <li>Workforce Analytics</li>
-                                </ul>
-                            </div>
-                            <!-- What We Image List End -->
-                        </div>
-                        <!-- What We Box End -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-1.jpg" alt="">
+                            </figure>
+                        </a>
                     </div>
+                    <!-- team Image End -->
 
-                    <div class="col-lg-6">
-                        <!-- What We Do Content Start -->
-                        <div class="what-we-do-content">
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Sophia Bennett</a></h3>
+                            <p>Hacking specialist</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-2.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Darrell steward</a></h3>
+                            <p>Attack specialist</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-3.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Ava mitchell</a></h3>
+                            <p>Cyber Expert</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-4.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Ethan carter</a></h3>
+                            <p>Penetration Tester</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="0.8s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-5.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Olivia Carter</a></h3>
+                            <p>Security Analyst</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="1s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-6.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Ethan Cooper</a></h3>
+                            <p>Security Analyst</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="1.2s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-7.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Emma Hayes</a></h3>
+                            <p>Cyber Expert</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <!-- Team Member Item Start -->
+                <div class="team-item wow fadeInUp" data-wow-delay="1.4s">
+                    <!-- team Image Start -->
+                    <div class="team-image">
+                        <a href="team-single.html" class="image-anime" data-cursor-text="View">
+                            <figure>
+                                <img src="images/team-8.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <!-- team Image End -->
+
+                    <!-- Team Body Start -->
+                    <div class="team-body">
+                        <!-- Team Content Start -->
+                        <div class="team-content">
+                            <h3><a href="team-single.html">Liam Parker</a></h3>
+                            <p>Penetration Tester</p>
+                        </div>
+                        <!-- Team Content End -->
+
+                        <!-- Team Social List Start -->
+                        <div class="team-social-list">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Team Social List End -->
+                    </div>
+                    <!-- Team Body End -->
+                </div>
+                <!-- Team Member Item End -->
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Special Features Section Start -->
+    <div class="special-features">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>Special Features</h3>
+                        <!-- <h2>Special  <span>Features</span></h2> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Easy Job Filtering & Quick Apply</h3>
+                            <p>Find jobs that match your skills and apply instantly with a single click.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Quick Candidate Shortlisting</h3>
+                            <p>Employers can efficiently shortlist and select top talent with ease.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Direct Employer Selection</h3>
+                            <p>Employers can directly choose candidates best suited for their roles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Direct Job Seeker Contact</h3>
+                            <p>Job seekers can reach out to employers directly for opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Any Location Search</h3>
+                            <p>Search for jobs anywhere, tailored to your preferred location.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Secure In-App Chats</h3>
+                            <p>Communicate securely with hidden phone numbers for privacy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Direct WhatsApp & Calling</h3>
+                            <p>Connect instantly via WhatsApp or direct calls for quick communication.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Profile Switching & Hiding</h3>
+                            <p>Control your profile visibility with flexible switching options.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Affordable Subscription Plans</h3>
+                            <p>Access premium features with budget-friendly subscription options.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Urgent Jobseeker & Hiring Badge</h3>
+                            <p>Stand out with cost-effective priority badges for urgent needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Cash Back Offers</h3>
+                            <p>Enjoy exclusive cash back offers for job seekers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-item">
+                        <div class="icon-box">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Job Vacancy Sharing & Reporting</h3>
+                            <p>Share job listings and report issues effortlessly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CTA Box Section End -->
+
+    <!-- Welcome Section Start -->
+    <section class="welcome-sabka">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Welcome to Sabka</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">India’s Fastest
+                            Growing
+                            <span>Hiring Platform</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="welcome-item wow fadeInUp">
+                        <div class="welcome-content">
+                            <h3>25,000+</h3>
+                            <p>Job seekers actively looking for jobs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="welcome-content">
+                            <h3>5,000+</h3>
+                            <p>Employers looking for candidates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="welcome-content">
+                            <h3>250,000+</h3>
+                            <p>Job vacancies listed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="welcome-content">
+                            <h3>24,000+</h3>
+                            <p>Job applications processed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="welcome-item wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="welcome-content">
+                            <h3>300+</h3>
+                            <p>Employer-reported candidate selections</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="welcome-item wow fadeInUp" data-wow-delay="1s">
+                        <div class="welcome-content">
+                            <h3>Thousands</h3>
+                            <p>Interview opportunities created</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="welcome-features wow fadeInUp" data-wow-delay="1.2s">
+                        <ul>
+                            <li>Unlimited Interviews for Job Seekers</li>
+                            <li>Unlimited Candidate Selection for Employers</li>
+                            <li>Quick Decision Making</li>
+                            <li>User-Friendly and Feature-Rich Hiring Experience</li>
+                            <li>Revolutionary Hiring: Employers Select Candidates Directly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Section End -->
+
+    <!-- Testimonials Section Start -->
+    <div class="our-testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonials-box">
+                        <!-- Testimonials Content Start -->
+                        <div class="testimonials-content">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h3 class="wow fadeInUp">Our Vision & Mission</h3>
-                                <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Innovative
-                                    Hiring,<span> Meaningful Employment</span></h2>
-
-                                <!-- Vision Section -->
-                                <div class="vision-section wow fadeInUp" data-wow-delay="0.4s">
-                                    <h4 style="color: #6c5ce7; font-weight: 600; margin-bottom: 15px;">OUR VISION</h4>
-                                    <p style="margin-bottom: 25px;">To illuminate the lives of millions by eradicating
-                                        unemployment, connecting talent with the right opportunities, and empowering
-                                        individuals to secure a better future. Through technology and skill development,
-                                        we
-                                        aim to reshape the job market, ensuring that no potential goes untapped and
-                                        every
-                                        family experiences the dignity of meaningful employment.</p>
-                                </div>
-
-                                <!-- Mission Section -->
-                                <div class="mission-section wow fadeInUp" data-wow-delay="0.6s">
-                                    <h4 style="color: #6c5ce7; font-weight: 600; margin-bottom: 15px;">OUR MISSION</h4>
-                                    <p>Sabka is on a mission to revolutionize employment by bridging the gap between job
-                                        seekers and industries, fostering a future where every skilled individual finds
-                                        the
-                                        right opportunity. We equip job seekers with essential, future-proof skills
-                                        while
-                                        enabling employers to navigate the challenges of an AI-driven world. By tackling
-                                        unemployment at its core, we strive to build a workforce that is resilient,
-                                        adaptable, and ready to drive economic growth.</p>
-                                </div>
+                                <h3 class="wow fadeInUp">Testimonials</h3>
+                                <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
+                                    Empowering Careers with <span>Smart Hiring</span>
+                                </h2>
+                                <p class="wow fadeInUp" data-wow-delay="0.4s">
+                                    Hear how professionals and companies are transforming their career journeys
+                                    through our intelligent job-matching and recruitment platform.
+                                </p>
                             </div>
                             <!-- Section Title End -->
 
-                            <!-- What We Do Body Start -->
-                            <div class="what-we-do-body wow fadeInUp" data-wow-delay="0.8s">
-                                <ul>
-                                    <li>Skill Development</li>
-                                    <li>Job Market Access</li>
-                                    <li>AI-Driven Training</li>
-                                    <li>Opportunity Matching</li>
-                                    <li>Employment Empowerment</li>
-                                </ul>
-                            </div>
-                            <!-- What We Do Body End -->
+                            <!-- Testimonials Body Start -->
+                            <div class="testimonials-body">
+                                <!-- Testimonials Counter Item Start -->
+                                <div class="testimonials-counter-item">
+                                    <h2><span class="counter">200</span>+</h2>
+                                    <p>companies hired successfully</p>
+                                </div>
+                                <!-- Testimonials Counter Item End -->
 
-                            <!-- What We Do Button Start -->
-                            <div class="what-we-do-button wow fadeInUp" data-wow-delay="1.0s">
-                                <a href="contact.html" class="btn-default">contact us</a>
+                                <!-- Testimonials Counter Item Start -->
+                                <div class="testimonials-counter-item">
+                                    <h2><span class="counter">500</span>+</h2>
+                                    <p>job seekers placed</p>
+                                </div>
+                                <!-- Testimonials Counter Item End -->
                             </div>
-                            <!-- What We Do Button End -->
+                            <!-- Testimonials Body End -->
                         </div>
-                        <!-- What We Do Content End -->
+                        <!-- Testimonials Content End -->
+
+                        <!-- Testimonial Slider Start -->
+                        <div class="testimonial-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Testimonial Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-header">
+                                                <div class="testimonial-author">
+                                                    <div class="author-image">
+                                                        <figure class="image-anime">
+                                                            <img src="images/author-1.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="author-content">
+                                                        <h3>Priya Sharma</h3>
+                                                        <p>Software Engineer</p>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial-quotes-img">
+                                                    <img src="images/testimonials-quotes-img.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>
+                                                    "The platform helped me land my dream job within just 3
+                                                    weeks.
+                                                    The interface is intuitive, and I appreciated the smart job
+                                                    alerts
+                                                    that perfectly matched my skills."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Slide End -->
+
+                                    <!-- Testimonial Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-header">
+                                                <div class="testimonial-author">
+                                                    <div class="author-image">
+                                                        <figure class="image-anime">
+                                                            <img src="images/author-2.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="author-content">
+                                                        <h3>Ravi Menon</h3>
+                                                        <p>UI/UX Designer</p>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial-quotes-img">
+                                                    <img src="images/testimonials-quotes-img.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>
+                                                    "The resume-building tools and personalized insights helped
+                                                    me
+                                                    stand out. I received four interview calls in a week after
+                                                    updating my profile."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Slide End -->
+
+                                    <!-- Testimonial Slide Start -->
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-header">
+                                                <div class="testimonial-author">
+                                                    <div class="author-image">
+                                                        <figure class="image-anime">
+                                                            <img src="images/author-3.jpg" alt="">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="author-content">
+                                                        <h3>Sneha Reddy</h3>
+                                                        <p>HR Manager</p>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial-quotes-img">
+                                                    <img src="images/testimonials-quotes-img.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <p>
+                                                    "As a recruiter, this platform has made our hiring process
+                                                    smoother than ever. We consistently find high-quality
+                                                    candidates
+                                                    faster than on any other portal."
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-pagination"></div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Slider End -->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Testimonials Section End -->
 
-
-        <!-- Special Features Section Start -->
-        <div class="special-features">
-            <div class="container">
-                <div class="row section-row">
-                    <div class="col-lg-12">
-                        <div class="section-title">
-                            <h3>Special Features</h3>
-                            <!-- <h2>Special  <span>Features</span></h2> -->
-                        </div>
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-7">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-cursor="-opaque">Let's start work <span>together!</span>
+                        </h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Looking for a new opportunity? Join us and
+                            take
+                            the next step in your career journey.</p>
                     </div>
+                    <!-- Section Title End -->
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-filter"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Easy Job Filtering & Quick Apply</h3>
-                                <p>Find jobs that match your skills and apply instantly with a single click.</p>
-                            </div>
-                        </div>
+
+                <div class="col-lg-5">
+                    <!-- Section Button Start -->
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="contact.html" class="btn-default">Let's Work Together</a>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-list-check"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Quick Candidate Shortlisting</h3>
-                                <p>Employers can efficiently shortlist and select top talent with ease.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-user-check"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Direct Employer Selection</h3>
-                                <p>Employers can directly choose candidates best suited for their roles.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Direct Job Seeker Contact</h3>
-                                <p>Job seekers can reach out to employers directly for opportunities.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Any Location Search</h3>
-                                <p>Search for jobs anywhere, tailored to your preferred location.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Secure In-App Chats</h3>
-                                <p>Communicate securely with hidden phone numbers for privacy.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Direct WhatsApp & Calling</h3>
-                                <p>Connect instantly via WhatsApp or direct calls for quick communication.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-eye-slash"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Profile Switching & Hiding</h3>
-                                <p>Control your profile visibility with flexible switching options.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-crown"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Affordable Subscription Plans</h3>
-                                <p>Access premium features with budget-friendly subscription options.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-medal"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Urgent Jobseeker & Hiring Badge</h3>
-                                <p>Stand out with cost-effective priority badges for urgent needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-money-bill-wave"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Cash Back Offers</h3>
-                                <p>Enjoy exclusive cash back offers for job seekers.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-item">
-                            <div class="icon-box">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <div class="feature-item-content">
-                                <h3>Job Vacancy Sharing & Reporting</h3>
-                                <p>Share job listings and report issues effortlessly.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-3 col-md-6">
-                    <div class="feature-item">
-                        <div class="icon-box">
-                            <i class="fas fa-user-cog"></i>
-                        </div>
-                        <div class="feature-item-content">
-                            <h3>Profile Optimisation Support</h3>
-                            <p>Get expert help to optimize your profile and enhance visibility.</p>
-                        </div>
-                    </div>
-                </div> -->
+                    <!-- Section Button End -->
                 </div>
             </div>
-        </div>
-        <!-- CTA Box Section End -->
 
-        <!-- What We Do Section Start -->
-
-        <!-- What We Do Section End -->
-
-        <!-- Our Testimonials Section Start -->
-
-        <section class="welcome-sabka">
-            <div class="container">
-                <div class="row section-row">
-                    <div class="col-lg-12">
-                        <!-- Section Title Start -->
-                        <div class="section-title section-title-center">
-                            <h3 class="wow fadeInUp">Welcome to Sabka</h3>
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">India’s Fastest
-                                Growing
-                                <span>Hiring Platform</span>
-                            </h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <!-- About Footer Start -->
+                    <div class="about-footer">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                            <img src="images/logoforxnew1.png" alt="">
                         </div>
-                        <!-- Section Title End -->
+                        <!-- Footer Logo End -->
                     </div>
+                    <!-- About Footer End -->
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="welcome-item wow fadeInUp">
-                            <div class="welcome-content">
-                                <h3>25,000+</h3>
-                                <p>Job seekers actively looking for jobs</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="welcome-item wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="welcome-content">
-                                <h3>5,000+</h3>
-                                <p>Employers looking for candidates</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="welcome-item wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="welcome-content">
-                                <h3>250,000+</h3>
-                                <p>Job vacancies listed</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="welcome-item wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="welcome-content">
-                                <h3>24,000+</h3>
-                                <p>Job applications processed</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="welcome-item wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="welcome-content">
-                                <h3>300+</h3>
-                                <p>Employer-reported candidate selections</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="welcome-item wow fadeInUp" data-wow-delay="1s">
-                            <div class="welcome-content">
-                                <h3>Thousands</h3>
-                                <p>Interview opportunities created</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="welcome-features wow fadeInUp" data-wow-delay="1.2s">
-                            <ul>
-                                <li>Unlimited Interviews for Job Seekers</li>
-                                <li>Unlimited Candidate Selection for Employers</li>
-                                <li>Quick Decision Making</li>
-                                <li>User-Friendly and Feature-Rich Hiring Experience</li>
-                                <li>Revolutionary Hiring: Employers Select Candidates Directly</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Our Blog Section End -->
-
-        <div class="our-testimonials">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="testimonials-box">
-                            <!-- Testimonials Content Start -->
-                            <div class="testimonials-content">
-                                <!-- Section Title Start -->
-                                <div class="section-title">
-                                    <h3 class="wow fadeInUp">Testimonials</h3>
-                                    <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                                        Empowering Careers with <span>Smart Hiring</span>
-                                    </h2>
-                                    <p class="wow fadeInUp" data-wow-delay="0.4s">
-                                        Hear how professionals and companies are transforming their career journeys
-                                        through our intelligent job-matching and recruitment platform.
-                                    </p>
-                                </div>
-                                <!-- Section Title End -->
-
-                                <!-- Testimonials Body Start -->
-                                <div class="testimonials-body">
-                                    <!-- Testimonials Counter Item Start -->
-                                    <div class="testimonials-counter-item">
-                                        <h2><span class="counter">200</span>+</h2>
-                                        <p>companies hired successfully</p>
-                                    </div>
-                                    <!-- Testimonials Counter Item End -->
-
-                                    <!-- Testimonials Counter Item Start -->
-                                    <div class="testimonials-counter-item">
-                                        <h2><span class="counter">500</span>+</h2>
-                                        <p>job seekers placed</p>
-                                    </div>
-                                    <!-- Testimonials Counter Item End -->
-                                </div>
-                                <!-- Testimonials Body End -->
-                            </div>
-                            <!-- Testimonials Content End -->
-
-                            <!-- Testimonial Slider Start -->
-                            <div class="testimonial-slider">
-                                <div class="swiper">
-                                    <div class="swiper-wrapper">
-                                        <!-- Testimonial Slide Start -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <div class="testimonial-header">
-                                                    <div class="testimonial-author">
-                                                        <div class="author-image">
-                                                            <figure class="image-anime">
-                                                                <img src="images/author-1.jpg" alt="">
-                                                            </figure>
-                                                        </div>
-                                                        <div class="author-content">
-                                                            <h3>Priya Sharma</h3>
-                                                            <p>Software Engineer</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="testimonial-quotes-img">
-                                                        <img src="images/testimonials-quotes-img.svg" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial-content">
-                                                    <p>
-                                                        "The platform helped me land my dream job within just 3
-                                                        weeks.
-                                                        The interface is intuitive, and I appreciated the smart job
-                                                        alerts
-                                                        that perfectly matched my skills."
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial Slide End -->
-
-                                        <!-- Testimonial Slide Start -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <div class="testimonial-header">
-                                                    <div class="testimonial-author">
-                                                        <div class="author-image">
-                                                            <figure class="image-anime">
-                                                                <img src="images/author-2.jpg" alt="">
-                                                            </figure>
-                                                        </div>
-                                                        <div class="author-content">
-                                                            <h3>Ravi Menon</h3>
-                                                            <p>UI/UX Designer</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="testimonial-quotes-img">
-                                                        <img src="images/testimonials-quotes-img.svg" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial-content">
-                                                    <p>
-                                                        "The resume-building tools and personalized insights helped
-                                                        me
-                                                        stand out. I received four interview calls in a week after
-                                                        updating my profile."
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Testimonial Slide End -->
-
-                                        <!-- Testimonial Slide Start -->
-                                        <div class="swiper-slide">
-                                            <div class="testimonial-item">
-                                                <div class="testimonial-header">
-                                                    <div class="testimonial-author">
-                                                        <div class="author-image">
-                                                            <figure class="image-anime">
-                                                                <img src="images/author-3.jpg" alt="">
-                                                            </figure>
-                                                        </div>
-                                                        <div class="author-content">
-                                                            <h3>Sneha Reddy</h3>
-                                                            <p>HR Manager</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="testimonial-quotes-img">
-                                                        <img src="images/testimonials-quotes-img.svg" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="testimonial-content">
-                                                    <p>
-                                                        "As a recruiter, this platform has made our hiring process
-                                                        smoother than ever. We consistently find high-quality
-                                                        candidates
-                                                        faster than on any other portal."
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-pagination"></div>
-                                </div>
-                            </div>
-                            <!-- Testimonial Slider End -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Footer Start -->
-        <footer class="main-footer">
-            <div class="container">
-                <div class="row section-row align-items-center">
-                    <div class="col-lg-7">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h2 class="wow fadeInUp" data-cursor="-opaque">Let's start work <span>together!</span>
-                            </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">Looking for a new opportunity? Join us and
-                                take
-                                the next step in your career journey.</p>
-                        </div>
-                        <!-- Section Title End -->
-                    </div>
-
-                    <div class="col-lg-5">
-                        <!-- Section Button Start -->
-                        <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="contact.html" class="btn-default">Let's Work Together</a>
-                        </div>
-                        <!-- Section Button End -->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-md-4">
-                        <!-- About Footer Start -->
-                        <div class="about-footer">
-                            <!-- Footer Logo Start -->
-                            <div class="footer-logo">
-                                <img src="images/logoforxnew1.png" alt="">
-                            </div>
-                            <!-- Footer Logo End -->
-                        </div>
-                        <!-- About Footer End -->
-                    </div>
-
-                    <div class="col-lg-5 col-md-8">
-                        <div class="footer-contact-box">
-                            <!-- Footer Links Start -->
-                            <div class="footer-links">
-                                <h3>Get In Touch</h3>
-                                <p><a href="tel:152885253">+(00) - 152 885 253</a></p>
-                                <p><a href="mailto:info@domainname.com">info@domainname.com</a></p>
-                            </div>
-                            <!-- Footer Links End -->
-
-                            <!-- Footer Links Start -->
-                            <div class="footer-links">
-                                <h3>Our Location</h3>
-                                <p>123 Lorem Street Suite 5B, Ips Park London, UK SW1A 1AA</p>
-                            </div>
-                            <!-- Footer Links End -->
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
+                <div class="col-lg-5 col-md-8">
+                    <div class="footer-contact-box">
                         <!-- Footer Links Start -->
-                        <div class="footer-links footer-privacy-policy">
-                            <h3>Subscribe Newsletter's</h3>
-                            <!-- Footer Newsletter Form Start -->
-                            <div class="footer-newsletter-form">
-                                <form id="newslettersForm" action="#" method="POST">
-                                    <div class="form-group">
-                                        <input type="email" name="mail" class="form-control" id="mail"
-                                            placeholder="Enter your email" required>
-                                        <button type="submit" class="newsletter-btn">subscribe<i
-                                                class="fa-regular fa-paper-plane"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Footer Newsletter Form End -->
+                        <div class="footer-links">
+                            <h3>Get In Touch</h3>
+                            <p><a href="tel:152885253">+(00) - 152 885 253</a></p>
+                            <p><a href="mailto:info@domainname.com">info@domainname.com</a></p>
+                        </div>
+                        <!-- Footer Links End -->
+
+                        <!-- Footer Links Start -->
+                        <div class="footer-links">
+                            <h3>Our Location</h3>
+                            <p>123 Lorem Street Suite 5B, Ips Park London, UK SW1A 1AA</p>
                         </div>
                         <!-- Footer Links End -->
                     </div>
+                </div>
 
-                    <div class="col-lg-12">
-                        <!-- Footer Copyright Text Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2025 Bloombiz Creatives All Rights Reserved.</p>
+                <div class="col-lg-4">
+                    <!-- Footer Links Start -->
+                    <div class="footer-links footer-privacy-policy">
+                        <h3>Subscribe Newsletter's</h3>
+                        <!-- Footer Newsletter Form Start -->
+                        <div class="footer-newsletter-form">
+                            <form id="newslettersForm" action="#" method="POST">
+                                <div class="form-group">
+                                    <input type="email" name="mail" class="form-control" id="mail"
+                                        placeholder="Enter your email" required>
+                                    <button type="submit" class="newsletter-btn">subscribe<i
+                                            class="fa-regular fa-paper-plane"></i></button>
+                                </div>
+                            </form>
                         </div>
-                        <!-- Footer Copyright Text End -->
+                        <!-- Footer Newsletter Form End -->
                     </div>
+                    <!-- Footer Links End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright Text Start -->
+                    <div class="footer-copyright-text">
+                        <p>Copyright © 2025 Bloombiz Creatives All Rights Reserved.</p>
+                    </div>
+                    <!-- Footer Copyright Text End -->
                 </div>
             </div>
-        </footer>
-        <!-- Footer End -->
+        </div>
+    </footer>
+    <!-- Footer End -->
 
-        <!-- Jquery Library File -->
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <!-- Bootstrap js file -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Validator js file -->
-        <script src="js/validator.min.js"></script>
-        <!-- SlickNav js file -->
-        <script src="js/jquery.slicknav.js"></script>
-        <!-- Swiper js file -->
-        <script src="js/swiper-bundle.min.js"></script>
-        <!-- Counter js file -->
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
-        <!-- Magnific js file -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <!-- Parallax js -->
-        <script src="js/parallaxie.js"></script>
-        <!-- MagicCursor js file -->
-        <script src="js/gsap.min.js"></script>
-        <script src="js/magiccursor.js"></script>
-        <!-- Text Effect js file -->
-        <script src="js/SplitText.js"></script>
-        <script src="js/ScrollTrigger.min.js"></script>
-        <!-- SmoothScroll -->
-        <script src="js/SmoothScroll.js"></script>
-        <!-- YTPlayer js File -->
-        <script src="js/jquery.mb.YTPlayer.min.js"></script>
-        <!-- Wow js file -->
-        <script src="js/wow.min.js"></script>
-        <!-- Main Custom js file -->
-        <script src="js/function.js"></script>
-    </body>
-
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+    <!-- Mermaid.js Script for Flowchart (UPDATED) -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+</body>
 
 </html>
