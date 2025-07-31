@@ -8081,8 +8081,8 @@ header.main-header .header-sticky.active {
 .service-card {
   position: relative;
   bottom: 30px;
-  background: rgb(8 4 22 / 54%);
-  border-radius: 16px;
+  background-color: #acbcdf;
+   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -8094,11 +8094,11 @@ header.main-header .header-sticky.active {
   justify-content: center;
 }
 
-.service-card:hover {
+/* .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   background: rgba(10, 3, 34, 0.9);
-}
+} */
 
 .service-content {
   flex: 1;
@@ -8112,7 +8112,7 @@ header.main-header .header-sticky.active {
 .service-title {
   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   font-weight: 700;
-  color: #c5c1c1;
+  color: #151414;
   margin: 0;
   line-height: 1.2;
 }
@@ -8177,7 +8177,7 @@ header.main-header .header-sticky.active {
 
 .video-thumbnail {
   width: 100%;
-  height: 200px;
+  /* height: 200px; */
   object-fit: cover;
   display: block;
 }
@@ -8205,22 +8205,23 @@ header.main-header .header-sticky.active {
 }
 
 .video-caption {
-  position: absolute;
+  position: absolute; /* Position inside the video thumbnail */
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.7);
   color: #ffffff;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 6px;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  font-size: 0.6rem;
+  opacity: 1; /* Always visible */
   pointer-events: none;
 }
 
-.video-section:hover .video-caption {
-  opacity: 1;
+
+.video-section {
+  position: relative; /* Make sure caption is relative to this */
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
@@ -8283,6 +8284,7 @@ header.main-header .header-sticky.active {
     height: 28px;
   }
 
+ 
   .video-thumbnail {
     height: 180px;
   }
@@ -8349,8 +8351,9 @@ header.main-header .header-sticky.active {
 
 .app-store-links {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 0px;
+  margin-top: 120px;
+  /* flex-wrap: wrap; */
 }
 
 .app-store-links img {
@@ -8437,19 +8440,19 @@ header.main-header .header-sticky.active {
   flex-wrap: wrap;
 }
 
-.app-store-links {
+/* .app-store-links {
   display: flex;
   gap: 10px;
   align-items: center;
-  /* position: relative;
-  top: 52px; */
-}
+  position: relative;
+  top: 52px;
+} */
 
-.app-buttons{
+/* .app-buttons{
   position: relative;
   top: 40px;
   left: 130px;
-}
+} */
 @media (max-width: 768px) {
   .service-content {
     flex-direction: column;
@@ -8541,14 +8544,6 @@ header.main-header .header-sticky.active {
 
 
 
-/* @keyframes running-stroke {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 200%;
-  }
-} */
 
 .service-card {
    
@@ -8558,24 +8553,7 @@ header.main-header .header-sticky.active {
 
 }
 
-.service-card::before,
-.service-card::after {
-        position: relative;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-flex
-;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: conic-gradient(from var(--r) at var(--x) 50%, #222 0%, #00FFB1 20%, #1A1A1A 25%);
-    animation: rotateAnimation 5s linear infinite, moveX 5s ease-in-out infinite alternate;
-    padding: 12px 24px;
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-}
+
 
 .service-card::before {
   left: 0;
@@ -8584,12 +8562,12 @@ header.main-header .header-sticky.active {
 .service-card::after {
   right: 0;
 }
-#service{
+/* #service{
   margin-right: 100px;
-}
+} */
 @media (max-width: 768px) {
   #service {
-    margin-right: 0; /* or any smaller value you prefer */
+    margin-right: 0; 
   }
 }
 .app-store-links img {
@@ -8598,113 +8576,28 @@ header.main-header .header-sticky.active {
   box-shadow: none;
 }
 
-/* Stroke Animation */
-@keyframes stroke-animate {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
+
 
 .service-card {
   position: relative;
+  right: 180px;
   border-radius: 10px;
   overflow: hidden;
   z-index: 0;
+  width: 750px;
+  height: 190px;
 }
 
-/* Pseudo-element for animated border */
-.service-card::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(90deg, #000000, #0a0f3d, #000814, #0a0f3d, #000000);
-  background-size: 200% auto;
-  animation: stroke-animate 4s linear infinite;
-  z-index: -1;
-  border-radius: 12px;
-}
+
 
 .service-card > * {
   position: relative;
   z-index: 2;
 }
 
-.service-card::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  z-index: -1;
-  border-radius: 10px;
-}
 
 
 
-
-/* stroke///////////////////// */
-
-/* .service-card {
-  position: relative;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #0e0f11;
-  color: white;
-  overflow: hidden;
-  z-index: 1;
-} */
-
-/* Glowing border using ::before */
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  background: conic-gradient(
-    from 0deg,
-    #1976ed,
-    #42a5f5,
-    #1976ed,
-    #42a5f5,
-    #1976ed
-  );
-  border-radius: 14px;
-  z-index: -1;
-  animation: glow-spin 4s linear infinite;
-  filter: blur(4px);
-}
-
-/* Optional: Smooth glowing ring inside */
-.service-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #11061f;
-  border-radius: 12px;
-  z-index: -1;
-}
-
-/* Animation keyframes */
-@keyframes glow-spin {
-  0% {
-    transform: rotate(0turn);
-  }
-  100% {
-    transform: rotate(1turn);
-  }
-}
 
 /* General styling for visit buttons */
 .visit-btn-self,
@@ -8725,4 +8618,63 @@ header.main-header .header-sticky.active {
     background-color: #19083a;
     transform: scale(1.05);
     text-decoration: underline;
+}
+
+
+
+
+
+
+.video-section {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+}
+
+.video-caption {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 600px) {
+    .video-section {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .video-thumbnail {
+        height: auto;
+    }
 }

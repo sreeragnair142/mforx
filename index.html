@@ -81,7 +81,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 600px; /* MODIFIED: Increased height */
+            min-height: 600px;
+            /* MODIFIED: Increased height */
         }
 
         .mermaid {
@@ -146,9 +147,7 @@
             <p class="hero-subtitle">Choose Your Preferred Service From Below</p>
 
             <div class="services-container">
-                
                 <!-- Self Services Platform Card -->
-                 
                 <div class="service-card">
                     <div class="service-content">
                         <div class="left-content">
@@ -161,12 +160,13 @@
 
                         <div class="right-content">
                             <div class="app-buttons">
-                                <a href="#" class="get-app-btn">Get The App</a>
+                                <div class="get-app-text" style="position: relative; top: 120px; color: #1a1a1a;">Get The SABKA App
+                                </div>
                                 <div class="app-store-links">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                        alt="Google Play" />
                                     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                        alt="App Store" />
+                                        alt="App Store" style="width: 100px;" />
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Google Play" style="width: 100px;" />
                                 </div>
                             </div>
                         </div>
@@ -177,9 +177,10 @@
                         <div class="video-wrapper">
                             <img src="images/graduation.jpg" alt="Sakka Demo" class="video-thumbnail" />
                             <div class="play-button"><i class="fas fa-play"></i></div>
-                            <div class="video-caption">Sakka Demo</div>
+                            <div class="video-caption">User Demo    </div>
                         </div>
                     </a>
+
                 </div>
 
                 <!-- Premium Pro Service Card -->
@@ -188,18 +189,18 @@
                         <div class="left-content">
                             <h3 class="service-title">
                                 <b>Premium Pro</b><br />
-                                <span id="service">Service</span>
+                                <span id="service">Services</span>
                             </h3>
                             <a href="#" class="visit-btn-premium">Visit Website</a>
                         </div>
                     </div>
 
                     <!-- Video Section -->
-                    <a href="https://www.youtube.com/watch?v=oUFJJNQGwhk" class="video-section">
+                    <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="video-section">
                         <div class="video-wrapper">
-                            <img src="images/graduation.jpg" alt="Premium Demo" class="video-thumbnail" />
+                            <img src="images/graduation.jpg" alt="Sakka Demo" class="video-thumbnail" />
                             <div class="play-button"><i class="fas fa-play"></i></div>
-                            <div class="video-caption">Premium Demo</div>
+                            <div class="video-caption">Promo Demo</div>
                         </div>
                     </a>
                 </div>
@@ -237,13 +238,13 @@
         .visit-btn-self,
         .visit-btn-premium {
             display: inline-block;
-            margin-top: 10px;
-            padding: 20px 30px;
+            margin-top: 35px;
+            padding: 21px 41px;
             background-color: #321549ac;
             color: white;
             border-radius: 5px;
             text-decoration: none;
-            margin-right: 50px;
+            /* margin-right: 50px; */
         }
 
         .get-app-btn {
@@ -259,7 +260,7 @@
 
         .app-store-links img {
             width: 120px;
-            margin-top: 10px;
+            /* margin-top: 10px; */
         }
 
         @media (max-width: 768px) {
@@ -325,10 +326,12 @@
             text-align: center;
         }
 
-        .app-store-links img {
+        /* .app-store-links img {
+            position: relative;
+            top: 30px;
             height: 40px;
             margin-top: 0.5rem;
-        }
+        } */
 
         /* Video styling */
         .video-section {
@@ -346,7 +349,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 2rem;
+            /* font-size: 2rem; */
             color: white;
         }
 
@@ -391,6 +394,7 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 gap: 0.5rem;
+                margin-bottom: 110px;
             }
 
             .app-store-links img {
@@ -697,24 +701,25 @@
             <!-- About Us Section End -->
 
             <!-- Sabka Ecosystem Flowchart Section Start (UPDATED) -->
-           <div class="flowchart-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-title section-title-center">
-          <h3 class="wow fadeInUp">Our Ecosystem</h3>
-          <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-            Sabka Ecosystem <span>Flowchart</span>
-          </h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 text-center">
-<img src="images/ok1.png" alt="">      </div>
-    </div>
-  </div>
-</div>
+            <div class="flowchart-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title section-title-center">
+                                <h3 class="wow fadeInUp">Our Ecosystem</h3>
+                                <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
+                                    Sabka Ecosystem <span>Flowchart</span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <img src="images/ok1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <style>
                 .mermaid-container {
