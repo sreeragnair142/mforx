@@ -69,7 +69,7 @@ body {
   line-height: 1.1em;
   color: var(--text-color);
   background: var(--bg-color);
-  
+
 }
 
 ::-webkit-scrollbar-track {
@@ -8092,7 +8092,7 @@ header.main-header .header-sticky.active {
   position: relative;
   bottom: 30px;
   background-color: #acbcdf;
-   border-radius: 16px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
@@ -8215,7 +8215,8 @@ header.main-header .header-sticky.active {
 }
 
 .video-caption {
-  position: absolute; /* Position inside the video thumbnail */
+  position: absolute;
+  /* Position inside the video thumbnail */
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -8224,13 +8225,15 @@ header.main-header .header-sticky.active {
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 0.6rem;
-  opacity: 1; /* Always visible */
+  opacity: 1;
+  /* Always visible */
   pointer-events: none;
 }
 
 
 .video-section {
-  position: relative; /* Make sure caption is relative to this */
+  position: relative;
+  /* Make sure caption is relative to this */
   display: inline-block;
 }
 
@@ -8295,7 +8298,7 @@ header.main-header .header-sticky.active {
     height: 28px;
   }
 
- 
+
   .video-thumbnail {
     height: 180px;
   }
@@ -8467,16 +8470,17 @@ header.main-header .header-sticky.active {
 @media (max-width: 768px) {
   .service-content {
     flex-direction: column;
-    
+
   }
+
 
   .app-buttons {
     position: relative;
     top: 20px;
-    left: 0;
+    right: 50px;
     margin-top: 15px;
   }
-  
+
 }
 
 
@@ -8557,10 +8561,10 @@ header.main-header .header-sticky.active {
 
 
 .service-card {
-   
-    border-radius: 10px;
-    z-index: 0;
-    transition: opacity .3s ease;
+
+  border-radius: 10px;
+  z-index: 0;
+  transition: opacity .3s ease;
 
 }
 
@@ -8573,14 +8577,16 @@ header.main-header .header-sticky.active {
 .service-card::after {
   right: 0;
 }
+
 /* #service{
   margin-right: 100px;
 } */
 @media (max-width: 768px) {
   #service {
-    margin-right: 0; 
+    margin-right: 0;
   }
 }
+
 .app-store-links img {
   border: none;
   outline: none;
@@ -8601,7 +8607,7 @@ header.main-header .header-sticky.active {
 
 
 
-.service-card > * {
+.service-card>* {
   position: relative;
   z-index: 2;
 }
@@ -8613,22 +8619,22 @@ header.main-header .header-sticky.active {
 /* General styling for visit buttons */
 .visit-btn-self,
 .visit-btn-premium {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    background-color: #0f0b34;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    /* font-weight: bold; */
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #0f0b34;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  /* font-weight: bold; */
 }
 
 /* Hover effect */
 .visit-btn-self:hover,
 .visit-btn-premium:hover {
-    background-color: #19083a;
-    transform: scale(1.05);
-    text-decoration: underline;
+  background-color: #19083a;
+  transform: scale(1.05);
+  text-decoration: underline;
 }
 
 
@@ -8637,94 +8643,98 @@ header.main-header .header-sticky.active {
 
 
 .video-section {
-    display: inline-block;
-    width: 150px;
-    height: 100px;
-    margin-right: 20px;
+  display: inline-block;
+  width: 150px;
+  height: 100px;
+  margin-right: 20px;
 }
 
 .video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .video-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
 }
 
 .video-caption {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 12px;
-    padding: 2px 6px;
-    border-radius: 4px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 /* Responsive for Mobile */
 @media (max-width: 600px) {
-    .video-section {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-    }
+  .video-section {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
 
-    .video-thumbnail {
-        height: auto;
-    }
-}
-.video-heading {
-    font-size: 1rem;
-    font-weight: bold;
-    color: white; /* Adjust based on background */
-    margin-bottom: 5px;
+  .video-thumbnail {
+    height: auto;
+  }
 }
 
 .video-heading {
-    font-size: 1rem;
-    font-weight: bold;
-    color: rgb(26, 26, 26); /* Adjust based on background */
-    margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  /* Adjust based on background */
+  margin-bottom: 5px;
 }
+
+.video-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(26, 26, 26);
+  /* Adjust based on background */
+  margin-bottom: 5px;
+}
+
 .video-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.9rem;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
-  .video-container{
+  .video-container {
     position: relative;
     left: 55px;
   }
 }
 
 @media (max-width: 600px) {
-  .video-containerr{
+  .video-containerr {
     position: relative;
-    left: 55px;
+    left: 185px;
     bottom: 150px;
   }
 }
@@ -8893,3 +8903,189 @@ header.main-header .header-sticky.active {
 
 
 
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .service-content,
+  .video-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-wrapper img.video-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .play-button {
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .visit-btn-premium {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .service-title {
+    font-size: 20px;
+  }
+
+  .video-heading {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+
+.get-app-text {
+  position: relative;
+  top: 120px;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.get-app-text:hover {
+  color: #784708;
+  /* Blue color on hover */
+  /* text-decoration: underline; */
+}
+
+@media screen and (max-width: 768px) {
+  .app-store-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .store-badge {
+    width: 220px;
+    /* Adjust based on actual width of the "Click to Get SABKA App" line */
+    max-width: 100%;
+    cursor: pointer;
+  }
+
+  .get-app-text {
+    margin-left: 90px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #dbe2f5;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .visit-btn-self,
+  .visit-btn-premium {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .get-app-text {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .app-store-links img {
+    width: 120px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .video-containerr,
+  .video-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .video-heading {
+    font-size: 15px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+
+  .play-button {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  #service {
+    margin-right: 0 !important;
+    right: 0 !important;
+  }
+}

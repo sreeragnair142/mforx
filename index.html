@@ -160,17 +160,18 @@
 
                         <div class="right-content">
                             <div class="app-buttons">
-                                <div class="get-app-text" style="position: relative; top: 120px; color: #1a1a1a;">Get
-                                     SABKA App
+                                <div class="get-app-text">
+                                    <b>Click</b> to Get SABKA App
                                 </div>
                                 <div class="app-store-links">
                                     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                        alt="App Store" style="width: 100px;" />
+                                        alt="App Store" style="width: 100px; cursor: pointer;" id="play" />
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                                        alt="Google Play" style="width: 100px;" />
+                                        alt="Google Play" style="width: 100px; cursor: pointer;" id="app" />
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Video Section -->
@@ -194,9 +195,11 @@
                         <div class="left-content">
                             <h3 class="service-title">
                                 <b>Premium Pro</b><br />
-                                <span id="service">Services</span>
+                                <span id="service"
+                                    style="margin-right: 70px; position: relative; right: 2px;">Services</span>
                             </h3>
-                            <a href="#" class="visit-btn-premium">Visit Website</a>
+                            <a href="#" class="visit-btn-premium" style="position: relative; right: 4px;">Visit
+                                Website</a>
                         </div>
                     </div>
 
@@ -215,8 +218,32 @@
 
         </div>
     </div>
+
+
     <!-- Hero Section End -->
     <style>
+        @media (max-width: 1024px) {
+            .services-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                /* Or any appropriate width */
+                margin: 0 auto;
+                /* Center horizontally */
+            }
+
+            .video-container {
+                text-align: center;
+            }
+
+            .video-wrapper {
+                margin: 0 auto;
+            }
+        }
+
         .services-container {
             display: flex;
             flex-wrap: wrap;
@@ -273,6 +300,7 @@
         @media (max-width: 768px) {
             .service-card {
                 flex: 1 1 100%;
+
             }
 
             .service-content {
@@ -286,20 +314,7 @@
             }
         }
 
-        /* Base layout (desktop default) */
-        /* .services-container {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-} */
 
-        /* .service-card {
-  background: linear-gradient(to right, #1c1c3b, #2e003e);
-  border-radius: 12px;
-  padding: 2rem;
-  color: white;
-} */
 
         .service-content {
             display: flex;
@@ -313,7 +328,7 @@
         }
 
         .service-title span {
-            margin-right: 62px;
+            margin-right: 45px;
             font-weight: normal;
             font-size: 28px;
 
@@ -401,6 +416,8 @@
             }
 
             .app-store-links {
+                position: relative;
+                left: 55px;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -410,6 +427,10 @@
 
             .app-store-links img {
                 height: 36px;
+            }
+
+            #play {
+                width: 80px;
             }
 
             .service-buttons {
@@ -732,7 +753,7 @@
                 </div>
             </div>
 
-          
+
 
 
             <!-- Sabka Ecosystem Flowchart Section End (UPDATED) -->
