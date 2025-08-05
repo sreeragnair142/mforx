@@ -9119,7 +9119,7 @@ header.main-header .header-sticky.active {
     right: 0 !important;
   }
 }
-@media (min-width: 375px) and (max-width: 601px) {
+@media (min-width: 320px) and (max-width: 601px) {
   .services-container {
     display: flex;
     flex-direction: column;
