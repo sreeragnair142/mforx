@@ -8371,7 +8371,6 @@ header.main-header .header-sticky.active {
 }
 
 .app-store-links {
-  margin-left: 25px;
   display: flex;
   gap: 0px;
   margin-top: 120px;
@@ -8980,7 +8979,6 @@ header.main-header .header-sticky.active {
 }
 
 .get-app-text {
-  margin-left: 37px;
   position: relative;
   top: 120px;
   color: #1a1a1a;
