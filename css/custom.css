@@ -8064,7 +8064,7 @@ header.main-header .header-sticky.active {
 .hero-subtitle {
   position: relative;
   bottom: 30px;
-  right: 340px;
+  right: 290px;
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   text-align: center;
   font-weight: 400;
@@ -8077,6 +8077,13 @@ header.main-header .header-sticky.active {
     left: 0px;
     font-size: 1rem;
     margin: 20px auto;
+  }
+}
+
+@media (max-width: 375px){
+.video-container{
+    position: relative;
+    right: 50px;
   }
 }
 
@@ -8704,6 +8711,22 @@ header.main-header .header-sticky.active {
   margin-bottom: 5px;
 }
 
+
+
+.video-headingg{
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(22, 21, 21);
+  /* Adjust based on background */
+  margin-bottom: 5px;
+  text-align: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+
+
+
 .video-heading {
   font-size: 1rem;
   font-weight: bold;
@@ -8724,20 +8747,20 @@ header.main-header .header-sticky.active {
   font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
+/* @media (min-width: 600px) {
   .video-container {
     position: relative;
     left: 55px;
   }
-}
-
-@media (max-width: 600px) {
+} */
+/* 
+@media (min-width: 600px) {
   .video-containerr {
     position: relative;
-    left: 185px;
-    bottom: 150px;
+    /* left: 185px; */
+    /* bottom: 150px; */
   }
-}
+} */
 
 
 
@@ -9033,7 +9056,7 @@ header.main-header .header-sticky.active {
 
   .get-app-text {
     font-size: 14px;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
   }
 
   .app-store-links img {
@@ -9044,14 +9067,21 @@ header.main-header .header-sticky.active {
 
   .video-containerr,
   .video-container {
-    margin-top: 10px;
+
+    margin-top: -210px;
     width: 100%;
   }
 
   .video-heading {
+    /* margin-right: 250px; */
     font-size: 15px;
     margin-bottom: 6px;
     text-align: center;
+  }
+  .video-headingg{
+    text-align: center;
+    position: relative;
+    bottom: 270px;
   }
 
   .video-wrapper {
@@ -9089,3 +9119,186 @@ header.main-header .header-sticky.active {
     right: 0 !important;
   }
 }
+@media (min-width: 375px) and (max-width: 601px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    left: 180px;
+  }
+
+  .service-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    right: 50px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .visit-btn-self,
+  .visit-btn-premium {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .app-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-store-links img {
+    margin: 6px 0;
+    width: 120px;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    right: 0;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
+
+
+
+@media (min-width: 375px) and (max-width: 601px),
+       (min-width: 768px) and (max-width: 1024px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    left: 180px;
+  }
+
+  .service-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    right: 50px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .visit-btn-self,
+  .visit-btn-premium {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .app-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-store-links img {
+    margin: 6px 0;
+    width: 120px;
+  }
+
+  .video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+    right: 0;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
