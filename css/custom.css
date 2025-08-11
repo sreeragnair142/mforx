@@ -7203,7 +7203,7 @@ header.main-header .header-sticky.active {
 
 .hero-video {
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -7675,7 +7675,7 @@ header.main-header .header-sticky.active {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .hero-video {
@@ -7683,7 +7683,7 @@ header.main-header .header-sticky.active {
   top: 0;
   left: 0;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
@@ -8030,7 +8030,7 @@ header.main-header .header-sticky.active {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.65);
   z-index: 2;
 }
@@ -8180,7 +8180,7 @@ header.main-header .header-sticky.active {
   flex-shrink: 0;
   width: 300px;
   position: relative;
-  /* background: linear-gradient(135deg, #0e0631, #2e2565); */
+  background: linear-gradient(135deg, #0e0631, #2e2565);
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
@@ -9820,7 +9820,6 @@ header.main-header .header-sticky.active {
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
   .video-container {
     display: flex;
     flex-direction: column;
@@ -9844,27 +9843,6 @@ header.main-header .header-sticky.active {
 
 /* Tablet view: 768px–1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
-
-  .hero-video {
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* height: 100%; */
-  object-fit: cover;
-  z-index: -1;
-}
-
 
   .right-logo{
  margin-right: 60px;
