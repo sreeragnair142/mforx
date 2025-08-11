@@ -46,49 +46,7 @@
     <!-- Main Custom Css -->
     <link href="css/custom.css" rel="stylesheet" media="screen">
 
-    <style>
-        /* UPDATED: Modern Dark Flowchart Styles */
-        .flowchart-section {
-            padding: 100px 0;
-            /* background-color: #111; */
-            /* Dark background for the section */
-        }
 
-        .flowchart-section .section-title h3 {
-            color: #ccc;
-        }
-
-        .flowchart-section .section-title h2 {
-            color: #fff;
-            /* White text for titles */
-        }
-
-        .flowchart-section .section-title h2 span {
-            /* Keep span color or adjust if needed */
-            color: #6c5ce7;
-        }
-
-
-        .mermaid-container {
-            background-color: #1a1a1a;
-            /* Slightly lighter dark card */
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid #333;
-            overflow-x: auto;
-            /* Ensures flowchart is scrollable on small screens */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 600px;
-            /* MODIFIED: Increased height */
-        }
-
-        .mermaid {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -187,7 +145,6 @@
                     </div>
 
                     <!-- Video Section -->
-                    <!-- Video Section -->
                     <div class="video-containerr">
                         <div class="video-heading"> Demo Video</div> <!-- Heading outside video -->
                         <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="video-section">
@@ -233,264 +190,7 @@
 
 
     <!-- Hero Section End -->
-    <style>
-        @media (max-width: 1024px) {
-            .services-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .service-card {
-                /* Or any appropriate width */
-                margin: 0 auto;
-                /* Center horizontally */
-            }
-
-            .video-container {
-                text-align: center;
-            }
-
-            .video-wrapper {
-                margin: 0 auto;
-            }
-        }
-
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-
-
-        .service-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        /* .left-content {
-  flex: 1;
-} */
-
-        .right-content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .visit-btn-self,
-        .visit-btn-premium {
-            display: inline-block;
-            margin-top: 35px;
-            padding: 21px 41px;
-            background-color: #0f0b34;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            /* margin-right: 50px; */
-        }
-
-        .get-app-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            /* background-color: #24053dac; */
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-right: 50px;
-        }
-
-        .app-store-links img {
-            width: 120px;
-            /* margin-top: 10px; */
-        }
-
-        @media (max-width: 768px) {
-            .service-card {
-                flex: 1 1 100%;
-
-            }
-
-            .service-content {
-                flex-direction: column;
-            }
-
-            .right-content {
-                align-items: center;
-                position: relative;
-                bottom: 100px;
-            }
-        }
-
-
-
-        .service-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .service-title {
-            font-size: 29px;
-
-        }
-
-        .service-title span {
-            margin-right: 45px;
-            font-weight: normal;
-            font-size: 28px;
-
-        }
-
-        .visit-btn,
-        .visit-btnn,
-        .standalone {
-            display: inline-block;
-            margin-top: 1rem;
-            background: #080533af;
-            padding: 18px 25px;
-            /* border-radius: 8px; */
-            color: white;
-            text-decoration: none;
-        }
-
-        .button-icon-group {
-            text-align: center;
-        }
-
-        /* .app-store-links img {
-            position: relative;
-            top: 30px;
-            height: 40px;
-            margin-top: 0.5rem;
-        } */
-
-        /* Video styling */
-        .video-section {
-            display: block;
-            margin-top: 1rem;
-        }
-
-        .video-thumbnail {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* font-size: 2rem; */
-            color: white;
-        }
-
-        .video-caption {
-            margin-top: 0.5rem;
-            text-align: center;
-        }
-
-        /* ✅ MOBILE STYLES */
-        @media (max-width: 768px) {
-            .service-content {
-                position: relative;
-                left: 55px;
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: center;
-            }
-
-            .left-content,
-            .right-content {
-                width: 100%;
-            }
-
-            .service-title {
-                font-size: 22px;
-                letter-spacing: 1px;
-            }
-
-            .service-title span {
-                font-size: 18px;
-                letter-spacing: 0.5px;
-            }
-
-            .visit-btn,
-            .visit-btnn,
-            .standalone {
-                margin: 1rem auto;
-                font-size: 16px;
-                padding: 8px 16px;
-            }
-
-            .app-store-links {
-                position: relative;
-                left: 55px;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                margin-bottom: 110px;
-            }
-
-            .app-store-links img {
-                height: 36px;
-            }
-
-            #play {
-                width: 80px;
-            }
-
-            .service-buttons {
-                text-align: center;
-                margin-top: 1rem;
-            }
-        }
-    </style>
-    <style>
-        .video-gallery-image {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-gallery-image figure img {
-            width: 100%;
-            display: block;
-        }
-
-        .video-overlay-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            text-align: center;
-            opacity: 0;
-            transition: 0.3s ease;
-        }
-
-        .video-gallery-image:hover .video-overlay-info {
-            opacity: 1;
-        }
-
-        .video-overlay-info h5 {
-            margin: 0;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .video-overlay-info span {
-            font-size: 14px;
-            display: block;
-            margin-top: 4px;
-        }
-    </style>
+  
 
 
     <div class="page-video-gallery" style="position: relative; bottom: 80px">
@@ -628,7 +328,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-title section-title-center">
-                                <h3 class="wow fadeInUp">Our Ecosystem</h3>
+                                <h3 class="wow fadeInUp">sabka World Ecosystem</h3>
                                 <!-- <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
                                     Sabka Ecosystem <span>Flowchart</span>
                                 </h2> -->
@@ -637,7 +337,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <img src="images/flowchartnew.jpg" alt="">
+                            <img src="images/flowfinal.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -766,57 +466,9 @@
             </div>
             <!-- About Us Section End -->
 
-            <!-- Sabka Ecosystem Flowchart Section Start (UPDATED) -->
-
-
-
-
-
-            <!-- Sabka Ecosystem Flowchart Section End (UPDATED) -->
 
             <!-- Gallery Section Start -->
-            <style>
-                .image-anime {
-                    position: relative;
-                    overflow: hidden;
-                }
 
-                .image-anime img {
-                    width: 100%;
-                    display: block;
-                    transition: 0.3s ease;
-                }
-
-                .overlay-text {
-                    position: absolute;
-                    top: -100%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(15, 15, 15, 0.8);
-                    color: #fff;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    transition: 0.4s ease;
-                    text-align: center;
-                }
-
-                .image-anime:hover .overlay-text {
-                    top: 0;
-                }
-
-                .overlay-text h4 {
-                    font-size: 18px;
-                    margin-bottom: 6px;
-                }
-
-                .overlay-text p {
-                    font-size: 14px;
-                    margin: 0;
-                }
-            </style>
 
             <div class="col-lg-12">
                 <div class="section-title section-title-center">
@@ -958,79 +610,7 @@
             </div>
             <!-- Gallery Section End -->
 
-            <style>
-                .slider-container {
-                    overflow: hidden;
-                    width: 100%;
-                    position: relative;
-                }
 
-                .slider-wrapper {
-                    display: flex;
-                    transition: transform 0.5s ease-in-out;
-                    width: calc(100% * 2);
-                    /* 12 projects (6 original + 6 duplicates) for seamless loop */
-                }
-
-                .project-slide {
-                    flex: 0 0 16.666%;
-                    /* 100% / 6 = 16.666% for 6 projects visible */
-                    padding: 0 10px;
-                    box-sizing: border-box;
-                }
-
-                .project-item {
-                    height: 100%;
-                }
-
-                /* Responsive adjustments */
-                @media (max-width: 1200px) {
-                    .project-slide {
-                        flex: 0 0 25%;
-                        /* 4 slides visible */
-                    }
-                }
-
-                @media (max-width: 768px) {
-                    .project-slide {
-                        flex: 0 0 50%;
-                        /* 2 slides visible */
-                    }
-
-                    .section-title h2 {
-                        font-size: 28px;
-                    }
-
-                    .container-fluid {
-                        padding: 0 15px;
-                    }
-                }
-
-                @media (max-width: 576px) {
-                    .project-slide {
-                        flex: 0 0 100%;
-                    }
-
-                    .section-title h2 {
-                        font-size: 24px;
-                    }
-
-                    .project-content {
-                        padding: 15px;
-                    }
-
-                    .project-image {
-                        height: 500px;
-                    }
-
-                    .project-content p {
-                        padding-right: 300px;
-                        font-size: 14px;
-                        line-height: 1.6;
-
-                    }
-                }
-            </style>
         </div>
     </div>
 
