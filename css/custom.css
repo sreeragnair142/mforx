@@ -8180,7 +8180,7 @@ header.main-header .header-sticky.active {
   flex-shrink: 0;
   width: 300px;
   position: relative;
-  background: linear-gradient(135deg, #0e0631, #2e2565);
+  /* background: linear-gradient(135deg, #0e0631, #2e2565); */
   border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
