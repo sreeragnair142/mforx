@@ -1169,7 +1169,7 @@ header.main-header .header-sticky.active {
   margin: 0 auto;
   text-align: center;
   z-index: 2;
-  bottom: 65px;
+  bottom: 95px;
 }
 
 /* .hero-content::before{
@@ -4131,9 +4131,9 @@ header.main-header .header-sticky.active {
 /***     27. Image Gallery css    ***/
 /************************************/
 
-.page-gallery {
+/* .page-gallery {
   padding: 80px 0 130px;
-}
+} */
 
 .page-gallery-box .photo-gallery {
   height: calc(100% - 30px);
@@ -4160,9 +4160,9 @@ header.main-header .header-sticky.active {
 /***    28. Video Gallery css     ***/
 /************************************/
 
-.page-video-gallery {
+/* .page-video-gallery {
   padding: 80px 0 130px;
-}
+} */
 
 .video-gallery-image {
   height: calc(100% - 30px);
