@@ -1981,11 +1981,9 @@ header.main-header .header-sticky.active {
 /***      12. What We Do css      ***/
 /************************************/
 
-.what-we-do {
+/* .what-we-do {
   padding: 80px 0;
-  position: relative;
-  bottom: 80px;
-}
+  } */
 
 .what-we-box {
   background: var(--secondary-color) url("../images/what-we-do-box-bg.svg");
@@ -2388,7 +2386,7 @@ header.main-header .header-sticky.active {
 }
 
 .main-footer .section-row {
-  border-bottom: 1px solid var(--divider-color);
+  /* border-bottom: 1px solid var(--divider-color); */
   padding-bottom: 80px;
 }
 
@@ -5924,8 +5922,8 @@ header.main-header .header-sticky.active {
 .special-features {
   padding: 100px 0;
   /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
-  position: relative;
-  bottom: 180px;
+  /* position: relative;
+  bottom: 180px; */
   overflow: hidden;
 }
 
@@ -8695,7 +8693,7 @@ header.main-header .header-sticky.active {
   .video-section {
     width: 90%;
     height: auto;
-    margin-right: 0;
+    /* margin-right: 0; */
   }
 
   .video-thumbnail {
@@ -8926,6 +8924,7 @@ header.main-header .header-sticky.active {
 
 
 @media (max-width: 768px) {
+
   .service-card {
     flex-direction: column;
     align-items: flex-start;
@@ -9313,6 +9312,7 @@ header.main-header .header-sticky.active {
 
 
 .video-heading {
+  margin-right: 20px;
   color: #040404;
   /* light purple */
   background: rgba(255, 255, 255, 0.05);
@@ -9326,6 +9326,7 @@ header.main-header .header-sticky.active {
 }
 
 .video-headingg {
+  margin-right: 20px;
   color: #040404;
   /* light purple */
   background: rgba(255, 255, 255, 0.05);
@@ -9619,6 +9620,7 @@ header.main-header .header-sticky.active {
     text-align: center;
   }
 
+
   .left-content,
   .right-content {
     width: 100%;
@@ -9666,7 +9668,7 @@ header.main-header .header-sticky.active {
   }
 }
 
-</style><style>.video-gallery-image {
+.video-gallery-image {
   position: relative;
   overflow: hidden;
 }
@@ -9924,3 +9926,37 @@ header.main-header .header-sticky.active {
     line-height: 1.4;
   }
 }
+
+
+
+        /* Very small devices - 320px and below */
+        @media (max-width: 320px) {
+            .navbar-brand img {
+                max-width: 100px;
+            }
+            
+            /* .right-logo img {
+                max-width: 80px;
+            } */
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .navbar {
+                padding: 0.25rem 0;
+            }
+
+            .video-headingg{
+              margin-left: 20px;
+              width: 200px;
+              margin-top: 60px;
+            }
+        }
+
+
+        
+
+   
+
+        
