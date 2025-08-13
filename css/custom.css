@@ -2552,6 +2552,25 @@ header.main-header .header-sticky.active {
   position: relative;
   bottom: 120px;
 }
+@media (max-width: 1024px) {
+  .page-header-box {
+    bottom: 80px; /* Less gap for tablets */
+  }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 768px) {
+  .page-header-box {
+    bottom: 40px; /* Even less gap for mobiles */
+  }
+}
+
+/* Extra small devices (375px and below) */
+@media (max-width: 480px) {
+  .page-header-box {
+    bottom: 20px; /* Almost no offset on very small screens */
+  }
+}
 
 .page-header-box h1 {
   font-size: 70px;
@@ -4314,6 +4333,7 @@ header.main-header .header-sticky.active {
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 160px;
+  margin-bottom: 30px;
 }
 
 .contact-info-item {
